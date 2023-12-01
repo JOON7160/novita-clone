@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>노비타</title>
+    <!-- Jquery CDN  -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- font-awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script src='/assets/JS/main.js' defer></script>
+    <title>노비타</title>
 </head>
 <body>
     <div class="container">
@@ -13,62 +18,81 @@
                 <h1 class="logo">
                     <a href="#none" aria-label='novita a kohler company'></a>
                 </h1>
-                <nav class="gnb">
-                    <li>
+                <ul class="gnb">
+                    <li class='prod1'>
                         <a href="#none">NOVITA</a>
-                        <ul class="sub">
-                            <li>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                            </li>
-                        </ul>
+                        <div class="sub">
+                            <ul class="depth">
+                                <li><a href="#none">노비타 이노베이션</a></li>
+                                <li><a href="#none">노비타 광고</a></li>
+                                <li><a href="#none">회사소개</a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <li>
+                    <li class='prod2'>
                         <a href="#none">PRODUCT</a>
-                        <ul class="sub">
-                            <li>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                            </li>
-                        </ul>
+                        <div class="sub">
+                            <ul class="depth">
+                                <li><a href="#none">BEST & NEW</a></li>
+                                <li>
+                                    <a href="#none">비데</a>
+                                    <ul class="depth2">
+                                        <li><a href="#none">- 살균비데</a></li>
+                                        <li><a href="#none">- 회전노즐 비데</a></li>
+                                        <li><a href="#none">- 방수 비데</a></li>
+                                        <li><a href="#none">- 실속형 비데</a></li>
+                                        <li><a href="#none">- 살균비데</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#none">생활가전</a>
+                                    <ul class="depth2">
+                                        <li><a href="#none">- 슈매니저</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#none">악세서리</a></li>
+                                <li><a href="#none">내게 맞는 비데 찾기</a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <li>
+                    <li class='prod3'>
                         <a href="#none">SERVICE</a>
-                        <ul class="sub">
-                            <li>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                            </li>
-                        </ul>
+                        <div class="sub ">
+                            <ul class="depth">
+                                <li><a href="#none">닥터클린 서비스</a></li>
+                                <li><a href="#none">설치 서비스</a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <li>
+                    <li class='prod4'>
                         <a href="#none">EVENT</a>
-                        <ul class="sub">
-                            <li>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                            </li>
-                        </ul>
+                        <div class="sub">
+                            <ul class="depth">
+                                <li><a href="#none">노비타 클럽</a></li>
+                                <li><a href="#none">노비타 LIVE</a></li>
+                            </ul>
+                        </div>
                     </li>
-                    <li>
+                    <li class='prod5'>
                         <a href="#none">CUSTOMER CENTER</a>
-                        <ul class="sub">
-                            <li>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                                <a href="#none">sub1</a>
-                            </li>
-                        </ul>
+                        <div class="sub">
+                            <ul class="depth">
+                                <li><a href="#none">AS신청</a></li>
+                                <li><a href="#none">공지사항</a></li>
+                                <li><a href="#none">FAQ</a></li>
+                                <li><a href="#none">1:1문의</a></li>
+                                <li><a href="#none">제품 등록</a></li>
+                                <li><a href="#none">대리점</a></li>
+                                <li><a href="#none">사용 설명서</a></li>
+                            </ul>
+
+                        </div>
                     </li>
-                </nav>
+                </ul>
                 <ul class="util">
                     <li><a href="#none">Login</a></li>
-                    <li><a href="#none">Cart <span>0</span></a></li>
-                    <li><a href="#none">Search</a></li>
+                    <li><a href="#none">Cart <span class='badge'>0</span></a></li>
+                    <li><a href="#none">SEARCH</a></li>
                 </ul>
             </div>
         </header>

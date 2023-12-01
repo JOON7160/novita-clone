@@ -1,1 +1,181 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;600&display=swap");
+/* reset css */
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* common css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* header */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  transition: 0.3s;
+  background: rgba(0, 0, 0, 0.2784313725);
+}
+header.active {
+  background: #fff;
+  width: 100%;
+}
+header.active .logo a {
+  display: block;
+  background: url(/assets/imgs/img-sprites.png) no-repeat -80px -120px;
+  width: 127px;
+  height: 50px;
+}
+header.active .gnb li a {
+  color: #000;
+}
+header.active .util li a {
+  color: #000;
+}
+header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1760px;
+  height: inherit;
+  margin: 0 auto;
+}
+header .logo {
+  margin-right: 150px;
+}
+header .logo a {
+  background: url(/assets/imgs/img-sprites.png) no-repeat -240px -120px;
+  width: 127px;
+  height: 50px;
+  display: block;
+}
+header .gnb {
+  display: flex;
+  margin-right: auto;
+}
+header .gnb > li {
+  margin: 0 30px;
+}
+header .gnb > li > a {
+  position: relative;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  width: 100%;
+  padding-bottom: 62px;
+}
+header .gnb > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #772480;
+  transition: 0.3s;
+}
+header .gnb > li:hover a {
+  color: #772480;
+}
+header .gnb > li:hover a::after {
+  width: 100%;
+}
+header .gnb > li .sub {
+  display: none;
+  transition: 0.3s;
+}
+header .gnb > li .sub .depth {
+  display: flex;
+}
+header .gnb > li .sub .depth > li {
+  width: 150px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+header .gnb > li .sub .depth > li > a {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+header .gnb > li .sub .depth > li > a:hover {
+  color: #772480;
+}
+header .gnb > li .sub .depth2 li a {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #777;
+}
+header .gnb > li .sub.active {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.0392156863);
+  z-index: 1000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.062745098);
+}
+header .gnb .prod1 .depth {
+  margin-left: 366px;
+}
+header .gnb .prod2 .depth {
+  margin-left: 500px;
+}
+header .gnb .prod2 .depth2 {
+  margin-top: 10px;
+}
+header .gnb .prod3 .depth {
+  margin-left: 670px;
+}
+header .gnb .prod4 .depth {
+  margin-left: 810px;
+}
+header .gnb .prod5 .depth {
+  margin-left: 300px;
+  text-align: center;
+}
+header .util {
+  display: flex;
+}
+header .util li {
+  margin-right: 10px;
+}
+header .util li a {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 13px;
+}
+header .util li a .badge {
+  color: #fff;
+  background: #772480;
+  border-radius: 50%;
+  padding: 1px 5px;
+}
