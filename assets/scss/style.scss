@@ -3,4 +3,73 @@
 //variables
 $font-kr: 'Noto Sans KR', sans-serif;
 $font-eg: 'Kumbh Sans', sans-serif;
+$primary-color : #772480;
 
+/* reset css */
+ul,li {margin: 0; padding: 0;}
+li {list-style: none;}
+a {text-decoration: none;}
+h1,h2,h3,h4,h5,h6 {margin: 0;}
+
+/* common css */
+body {
+    margin: 0;
+    padding: 0;
+}
+/* header */
+header {
+    background: #00000047; //임시 bg
+
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1760px;
+        height: 150px;
+        margin: 0 auto;
+        border: 1px solid #000;
+    }
+    .logo {
+        a {
+            background: url(/assets/imgs/img-sprites.png) no-repeat -240px -120px;
+            width: 127px;
+            height: 50px;
+            display: block; 
+        }
+        margin-right: 150px;
+    }
+    .gnb {
+        display: flex;
+        border: 1px solid #000;
+        margin-right: auto;
+        >li { 
+            position: relative;
+            margin: 0 30px;
+            > a {
+                font-family: $font-eg;
+                font-weight: bold;
+                font-size: 16px;
+                color: #fff;
+                width: 100%;
+                padding-bottom: 65px;
+                border: 1px solid red;
+            }
+        }
+        .sub {
+            position: absolute;
+            left: 0;
+            top: 400%;
+            border: 1px solid #000;
+        }
+    }
+    .util {
+        display: flex;
+        li {
+            margin-right: 10px;
+            a {
+                font-family: $font-eg;
+                color: #fff;
+            }
+        }
+    }
+}

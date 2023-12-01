@@ -1,1 +1,81 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;600&display=swap");
+/* reset css */
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* common css */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* header */
+header {
+  background: rgba(0, 0, 0, 0.2784313725);
+}
+header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1760px;
+  height: 150px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+header .logo {
+  margin-right: 150px;
+}
+header .logo a {
+  background: url(/assets/imgs/img-sprites.png) no-repeat -240px -120px;
+  width: 127px;
+  height: 50px;
+  display: block;
+}
+header .gnb {
+  display: flex;
+  border: 1px solid #000;
+  margin-right: auto;
+}
+header .gnb > li {
+  position: relative;
+  margin: 0 30px;
+}
+header .gnb > li > a {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  padding-bottom: 65px;
+  border: 1px solid red;
+}
+header .gnb .sub {
+  position: absolute;
+  left: 0;
+  top: 400%;
+  border: 1px solid #000;
+}
+header .util {
+  display: flex;
+}
+header .util li {
+  margin-right: 10px;
+}
+header .util li a {
+  font-family: "Kumbh Sans", sans-serif;
+  color: #fff;
+}
