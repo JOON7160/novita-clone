@@ -59,7 +59,8 @@ header .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1760px;
+  max-width: 1760px;
+  min-width: 1200px;
   height: inherit;
   margin: 0 auto;
 }
@@ -109,6 +110,7 @@ header .gnb > li .sub {
   transition: 0.3s;
 }
 header .gnb > li .sub .depth {
+  position: relative;
   display: flex;
 }
 header .gnb > li .sub .depth > li {
@@ -144,7 +146,7 @@ header .gnb > li .sub.active {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.062745098);
 }
 header .gnb .prod1 .depth {
-  margin-left: 366px;
+  left: 366px;
 }
 header .gnb .prod2 .depth {
   margin-left: 500px;
