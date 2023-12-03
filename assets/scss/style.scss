@@ -62,7 +62,8 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 1760px;
+        max-width: 1760px;
+        min-width: 1200px;
         height: inherit;
         margin: 0 auto;
     }
@@ -109,6 +110,7 @@ header {
                 display: none;
                 transition: 0.3s;
                 .depth {
+                    position: relative;
                     display: flex;
                     >li {
                         width: 150px;
@@ -162,7 +164,8 @@ header {
         }
         .prod1 {
             .depth {
-                margin-left:366px;
+                // margin-left:366px;
+                left: 366px;
             }
         }
         .prod2 {
