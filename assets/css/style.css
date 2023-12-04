@@ -28,6 +28,16 @@ body {
   box-sizing: border-box;
 }
 
+.inner {
+  width: 1260px;
+  margin: 0 auto;
+  border: 1px solid #000;
+}
+
+/* floating-menu */
+.floating-menu {
+  display: none;
+}
 /* header */
 header {
   position: absolute;
@@ -184,3 +194,102 @@ header .util li a .badge {
 }
 
 /* main */
+main {
+  height: 500px;
+  border: 1px solid red;
+}
+
+/*find section */
+.find .title {
+  text-align: center;
+  margin: 30px 0;
+}
+.find .title h2 {
+  margin: 30px 0;
+}
+.find-link {
+  padding: 10px 15px;
+  border-radius: 20px;
+  background: #772480;
+  color: #fff;
+}
+.find-slide {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.find-slide .imgs {
+  display: flex;
+}
+.find-slide .imgs.origin {
+  animation: slide-origin 60s linear infinite;
+}
+.find-slide .imgs.clone {
+  animation: 60s linear 0s infinite normal none slide-clone;
+}
+
+@keyframes slide-origin {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.01% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-clone {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+/* best-seller section */
+.best-seller {
+  height: 400px;
+  border: 1px solid gold;
+}
+
+/* event-product section */
+.event-product {
+  height: 400px;
+  border: 1px solid orange;
+}
+
+/* event-notice section */
+.event-notice {
+  height: 400px;
+  border: 1px solid purple;
+}
+
+/* review section */
+.review {
+  height: 400px;
+  border: 1px solid #000;
+}
+
+/* service section */
+.service {
+  height: 400px;
+  border: 1px solid #000;
+}
+.service .title {
+  text-align: center;
+}
+/* info section */
+.info {
+  height: 400px;
+  border: 1px solid #000;
+}
+
+/* footer */
+footer {
+  height: 400px;
+  border: 1px solid #000;
+}
