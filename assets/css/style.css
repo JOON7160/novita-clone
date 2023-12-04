@@ -31,7 +31,6 @@ body {
 .inner {
   width: 1260px;
   margin: 0 auto;
-  border: 1px solid #000;
 }
 
 /* floating-menu */
@@ -275,13 +274,69 @@ main {
 }
 
 /* service section */
-.service {
-  height: 400px;
-  border: 1px solid #000;
-}
 .service .title {
   text-align: center;
+  margin-bottom: 50px;
 }
+.service .title h2 {
+  margin: 30px 0;
+}
+.service .title hr {
+  width: 3%;
+  border: 1px solid #000;
+}
+.service .title p {
+  color: #333;
+}
+.service-cont {
+  display: flex;
+  justify-content: center;
+  padding: 0 50px;
+  gap: 70px;
+}
+.service-cont .item {
+  width: 420px;
+}
+.service-cont .item .img {
+  width: 420px;
+  height: 600px;
+  border-radius: 500px 500px 250px 0;
+  overflow: hidden;
+}
+.service-cont .item .img img {
+  height: 100%;
+  display: block;
+}
+.service-cont .item .desc {
+  margin-top: 20px;
+}
+.service-cont .item .desc h3 {
+  font-size: 28px;
+}
+.service-cont .item .desc p {
+  font-size: 18px;
+  color: #333;
+}
+.service-cont .item .desc .service-link {
+  font-weight: bold;
+  color: .service-cont .item .desc .service-link #772480;
+}
+.service-cont .item .desc .service-link::after {
+  content: "\f061";
+  font-family: fontawesome;
+  margin-left: 5px;
+  transition: 0.3s;
+}
+.service-cont .item .desc .service-link:hover::after {
+  margin-left: 10px;
+}
+.service-cont .item:nth-of-type(2) {
+  margin-top: 150px;
+}
+.service-cont .item:nth-of-type(2) .img.right {
+  border-radius: 250px 0 500px 500px;
+}
+
 /* info section */
 .info {
   height: 400px;
