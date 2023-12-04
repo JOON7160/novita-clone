@@ -20,6 +20,20 @@ body {
 * {
     box-sizing: border-box;
 }
+.inner {
+    width: 1260px;
+    margin: 0 auto;
+}
+/* floating-menu */
+.floating-menu {
+    display: none;
+    .chat {
+
+    }
+    .top-btn {
+
+    }
+}
 /* header */
 header {
     position: absolute;
@@ -216,4 +230,40 @@ header {
 
 /* main */
 main {
+    
+}
+/*find section */
+.find {
+
+}
+
+/* best-seller section */
+.best-seller {
+
+}
+
+/* event-product section */
+.event-product {
+
+}
+
+/* event-notice section */
+.event-notice {
+
+}
+/* review section */
+.review {
+
+}
+/* service section */
+.service {
+
+}
+/* info section */
+.info {
+
+}
+/* footer */
+footer {
+
 }
