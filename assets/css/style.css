@@ -371,7 +371,7 @@ main {
   font-weight: 500;
 }
 .info-link {
-  margin-top: 50px;
+  margin-top: 120px;
 }
 .info-link .links {
   display: flex;
@@ -423,6 +423,126 @@ main {
 
 /* footer */
 footer {
-  height: 400px;
-  border: 1px solid #000;
+  margin-top: 120px;
+  background: #1c1c1c;
+}
+footer .inner {
+  padding: 80px 0;
+}
+footer .f-logo {
+  margin: 20px 0;
+}
+footer .f-logo a {
+  display: block;
+  background: url(/assets/imgs/img-sprites.png) no-repeat -240px -120px;
+  width: 127px;
+  height: 50px;
+}
+footer .f-cont {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+footer .f-cont .f-info {
+  flex: 4;
+}
+footer .f-cont .f-info .links {
+  display: flex;
+  margin: 20px 0;
+}
+footer .f-cont .f-info .links a {
+  color: #fff;
+  margin-right: 15px;
+  font-weight: 500;
+}
+footer .f-cont .f-info .address-info {
+  color: #909090;
+}
+footer .f-cont .f-info .address-info span {
+  margin-right: 5px;
+}
+footer .f-cont .f-info .address-info a {
+  color: #ccc;
+}
+footer .f-cont .f-info .sns {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+footer .f-cont .f-info .sns li {
+  background: #000;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 20px;
+}
+footer .f-cont .f-info .sns li a {
+  display: inline-block;
+}
+footer .f-cont .f-info .sns li:nth-of-type(1) a {
+  background: url(/assets/imgs/img-sprites.png) no-repeat -360px 0;
+  width: 18px;
+  height: 18px;
+}
+footer .f-cont .f-info .sns li:nth-of-type(2) a {
+  background: url(/assets/imgs/img-sprites.png) no-repeat -440px 0;
+  width: 18px;
+  height: 14px;
+}
+footer .f-cont .f-info .sns li:nth-of-type(3) a {
+  background: url(/assets/imgs/img-sprites.png) no-repeat -400px 0;
+  width: 11px;
+  height: 18px;
+}
+footer .f-cont .f-info .sns li:nth-of-type(4) a {
+  background: url(/assets/imgs/img-sprites.png) no-repeat -480px 0;
+  width: 18px;
+  height: 16px;
+}
+footer .f-cont .f-info .sns li:nth-of-type(5) {
+  width: 87px;
+  height: 40px;
+  line-height: 45px;
+}
+footer .f-cont .f-company {
+  flex: 2;
+  font-weight: 500;
+}
+footer .f-cont .f-company .call {
+  display: flex;
+  gap: 50px;
+}
+footer .f-cont .f-company .company-info em,
+footer .f-cont .f-company .call-center em,
+footer .f-cont .f-company .call-buying em {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  margin-bottom: 15px;
+}
+footer .f-cont .f-company .company-info a,
+footer .f-cont .f-company .company-info span,
+footer .f-cont .f-company .call-center a,
+footer .f-cont .f-company .call-center span,
+footer .f-cont .f-company .call-buying a,
+footer .f-cont .f-company .call-buying span {
+  color: #909090;
+}
+footer .f-cont .f-company .company-info {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+footer .f-cont .f-company .company-info a {
+  margin-right: 10px;
+}
+footer .f-cont .num {
+  display: block;
+  font-size: 32px;
+  font-weight: 500;
+}
+footer .f-cont .time {
+  font-size: 14px;
 }

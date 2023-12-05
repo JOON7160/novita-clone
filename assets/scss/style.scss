@@ -406,7 +406,7 @@ main {
         }
     }
     &-link {
-        margin-top: 50px;
+        margin-top: 120px;
         .links {
             display: flex;
             li {
@@ -474,6 +474,128 @@ main {
 }
 /* footer */
 footer {
-    height: 400px;
-    border: 1px solid #000;
+    margin-top: 120px;
+    background: #1c1c1c;
+    .inner {
+        padding: 80px 0;
+    }
+    .f-logo {
+        margin: 20px 0;
+        a {
+            display: block;
+            background: url(/assets/imgs/img-sprites.png)no-repeat -240px -120px;
+            width: 127px;
+            height: 50px;
+        }
+    }
+    .f-cont {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+        .f-info {
+            flex: 4;
+            .links {
+                display: flex;
+                margin: 20px 0;
+                a {
+                    color: #fff;
+                    margin-right: 15px;
+                    font-weight: 500;
+                }
+            }
+            .address-info {
+                color: #909090;
+                span {
+                    margin-right: 5px;
+                }
+                a {
+                    color: #ccc;
+                }
+
+            }
+            .sns {
+                display: flex;
+                align-items: center;
+                margin: 20px 0;
+                li {
+                    background: #000;
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    text-align: center;
+                    line-height: 30px;
+                    margin-right: 20px;
+                    a {
+                        display: inline-block;
+                    }
+                    &:nth-of-type(1) a{
+                        background: url(/assets/imgs/img-sprites.png) no-repeat -360px 0;
+                        width: 18px;
+                        height: 18px;
+                    }
+                    &:nth-of-type(2) a{
+                        background: url(/assets/imgs/img-sprites.png) no-repeat -440px 0;
+                        width: 18px;
+                        height: 14px;
+                    }
+                    &:nth-of-type(3) a{
+                        background: url(/assets/imgs/img-sprites.png)
+                        no-repeat -400px 0;
+                        width: 11px;
+                        height: 18px;
+                    }
+                    &:nth-of-type(4) a{
+                        background: url(/assets/imgs/img-sprites.png)
+                        no-repeat -480px 0;
+                        width: 18px;
+                        height: 16px;
+                    }
+                    &:nth-of-type(5) {
+                        width: 87px;
+                        height: 40px;
+                        line-height: 45px;
+                    }
+                }
+            }
+        }
+        .f-company {
+            flex: 2;
+            font-weight: 500;
+            .call {
+                display: flex;
+                gap: 50px;
+            }
+            .company-info,
+            .call-center,
+            .call-buying {
+                em {
+                    display: block;
+                    color: #fff;
+                    font-size: 18px;
+                    font-style: normal;
+                    margin-bottom: 15px;
+                }
+                a,
+                span {
+                color: #909090;
+                }
+                
+            }
+            .company-info {
+                font-size: 15px;
+                margin-bottom: 15px;
+                a {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .num {
+            display: block;
+            font-size: 32px;
+            font-weight: 500;
+        }
+        .time {
+            font-size: 14px;
+        }
+    }
 }
