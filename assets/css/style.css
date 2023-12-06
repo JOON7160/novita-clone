@@ -17,6 +17,11 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 /* common css */
 body {
   margin: 0;
@@ -31,6 +36,17 @@ body {
 .inner {
   width: 1260px;
   margin: 0 auto;
+}
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 /* floating-menu */
@@ -269,10 +285,172 @@ main {
 
 /* review section */
 .review {
-  height: 400px;
-  border: 1px solid #000;
+  margin: 100px 0;
+}
+.review h2 {
+  font-size: 40px;
+  text-align: center;
+}
+.review .swiper.review-slide {
+  width: 100%;
+  height: 100%;
+  background: url(/assets/imgs/bg-review.png) no-repeat top center;
+  overflow: hidden;
+}
+.review .swiper.review-slide .swiper-wrapper {
+  display: flex;
+  gap: 30px;
+  width: 1260px;
+  margin: 0 auto;
+  transition-property: transform;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide {
+  padding-top: 100px;
+  width: 392px;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-img {
+  width: 390px;
+  height: 330px;
+  transition: 0.8s;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-img img {
+  width: 100%;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-img:hover {
+  transform: translateY(-10%);
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-txt {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: wrap;
+  word-break: kepp-all;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 18px;
+  padding: 0 50px;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(0, 0, 0, 0.3254901961);
+  color: #333;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a img {
+  border-radius: 5px;
+  width: 56px;
+  height: 56px;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a .desc {
+  text-align: center;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a .desc strong {
+  display: block;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a .go-to-detail {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a .go-to-detail::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(/assets/imgs/ico-sprites.svg) no-repeat -20px -151px;
+  width: 13px;
+  height: 10px;
 }
 
+@media all and (max-width: 640px) {
+  .review .swiper.review-slide {
+    width: 100%;
+    height: 100%;
+    background: url(/assets/imgs/bg-review.png) no-repeat top center;
+    overflow: hidden;
+  }
+  .review .swiper.review-slide .swiper-wrapper {
+    display: flex;
+    gap: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    transition-property: transform;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide {
+    padding-top: 100px;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-img {
+    width: 390px;
+    height: 330px;
+    transition: 0.8s;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-img img {
+    width: 100%;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-img:hover {
+    transform: translateY(-10%);
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-txt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    white-space: wrap;
+    word-break: kepp-all;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 18px;
+    padding: 0 50px;
+    margin: 0;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(0, 0, 0, 0.3254901961);
+    color: #333;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a img {
+    border-radius: 5px;
+    width: 56px;
+    height: 56px;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a .desc {
+    text-align: center;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a .desc strong {
+    display: block;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a .go-to-detail {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-link a .go-to-detail::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(/assets/imgs/ico-sprites.svg) no-repeat -20px -151px;
+    width: 13px;
+    height: 10px;
+  }
+}
 /* service section */
 .service .title {
   text-align: center;
