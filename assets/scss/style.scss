@@ -322,10 +322,55 @@ main {
         text-align: center;
     }
     .swiper.review-slide {
+        position: relative;
         width: 100%;
         height: 100%;
         background: url(/assets/imgs/bg-review.png)no-repeat top center;
         overflow: hidden;
+        .swiper-control {
+            display: none;
+            position: absolute;
+            top: 30%;
+            left: 0;
+            width: 100%;
+            height: auto;
+            .swiper-button{
+                &-next,
+                &-prev {
+                    position: absolute;
+                    top: 0;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background: #fff;
+                    cursor: pointer;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 6px;
+                        height: 10px;
+                    }
+                }
+                &-next {
+                    right: 0;
+                    &::after {
+                        background: url(/assets/imgs/ico-sprites.svg)no-repeat -23px -211px;
+                    }
+                }
+                &-prev {
+                    left: 0;
+                    &::after {
+                        background: url(/assets/imgs/ico-sprites.svg)no-repeat -195px -211px;
+                    }
+                }
+                &-disabled {
+                    opacity: 0.3;
+                }
+            }
+        }
         .swiper-wrapper {
             display: flex;
             gap: 30px;
@@ -333,7 +378,6 @@ main {
             // width: 100%;
             margin: 0 auto;
             transition-property: transform;
-
             .swiper-slide {
                 padding-top: 100px;
                 width: 392px;
@@ -411,24 +455,34 @@ main {
             height: 100%;
             background: url(/assets/imgs/bg-review.png)no-repeat top center;
             overflow: hidden;
+            .swiper-control {
+                display: block;
+            }
             .swiper-wrapper {
                 display: flex;
                 gap: 0;
-                width: 100%;
+                width: 300%;
                 height: 100%;
-                // width: 100%;
-                margin: 0 auto;
                 transition-property: transform;
+                border: 1px solid green;
+                overflow: hidden;
                 .swiper-slide {
-                    padding-top: 100px;
+                    
+                    padding:100px 20px 0 20px ;
                     // width: 392px;
                     width: 100%;
                     height: auto;
                     margin-right: 0;
+                    border: 1px solid red;
+                    &-active {
+                        width: 100%;
+                    }
                     .review-img {
-                        width: 390px;
-                        height: 330px;
+                        width: 100%;
+                        height: auto;
                         transition: 0.8s;
+                        border: 1px solid blue;
+
                         img {
                             width: 100%;
                         }
