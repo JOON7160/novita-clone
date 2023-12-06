@@ -292,10 +292,52 @@ main {
   text-align: center;
 }
 .review .swiper.review-slide {
+  position: relative;
   width: 100%;
   height: 100%;
   background: url(/assets/imgs/bg-review.png) no-repeat top center;
   overflow: hidden;
+}
+.review .swiper.review-slide .swiper-control {
+  display: none;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+.review .swiper.review-slide .swiper-control .swiper-button-next, .review .swiper.review-slide .swiper-control .swiper-button-prev {
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+.review .swiper.review-slide .swiper-control .swiper-button-next::after, .review .swiper.review-slide .swiper-control .swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 10px;
+}
+.review .swiper.review-slide .swiper-control .swiper-button-next {
+  right: 0;
+}
+.review .swiper.review-slide .swiper-control .swiper-button-next::after {
+  background: url(/assets/imgs/ico-sprites.svg) no-repeat -23px -211px;
+}
+.review .swiper.review-slide .swiper-control .swiper-button-prev {
+  left: 0;
+}
+.review .swiper.review-slide .swiper-control .swiper-button-prev::after {
+  background: url(/assets/imgs/ico-sprites.svg) no-repeat -195px -211px;
+}
+.review .swiper.review-slide .swiper-control .swiper-button-disabled {
+  opacity: 0.3;
 }
 .review .swiper.review-slide .swiper-wrapper {
   display: flex;
@@ -376,24 +418,33 @@ main {
     background: url(/assets/imgs/bg-review.png) no-repeat top center;
     overflow: hidden;
   }
+  .review .swiper.review-slide .swiper-control {
+    display: block;
+  }
   .review .swiper.review-slide .swiper-wrapper {
     display: flex;
     gap: 0;
-    width: 100%;
+    width: 300%;
     height: 100%;
-    margin: 0 auto;
     transition-property: transform;
+    border: 1px solid green;
+    overflow: hidden;
   }
   .review .swiper.review-slide .swiper-wrapper .swiper-slide {
-    padding-top: 100px;
+    padding: 100px 20px 0 20px;
     width: 100%;
     height: auto;
     margin-right: 0;
+    border: 1px solid red;
+  }
+  .review .swiper.review-slide .swiper-wrapper .swiper-slide-active {
+    width: 100%;
   }
   .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-img {
-    width: 390px;
-    height: 330px;
+    width: 100%;
+    height: auto;
     transition: 0.8s;
+    border: 1px solid blue;
   }
   .review .swiper.review-slide .swiper-wrapper .swiper-slide .review-img img {
     width: 100%;
