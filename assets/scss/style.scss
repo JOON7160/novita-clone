@@ -319,10 +319,14 @@ main {
     h2 {
         text-align: center;
         font-size: 35px;
+        margin: 50px 0;
     }
     .swiper.event-prod-slide {
         width: 100%;
         height: 100%;
+        .swiper-control {
+            display: none;
+        }
         .swiper-wrapper {
             display: flex;
             justify-content: space-between;
@@ -449,6 +453,7 @@ main {
         .swiper.event-prod-slide {
             overflow: hidden;
             .swiper-control {
+                display: block;
                 .fraction-pagination {
                     padding: 11px 17px 11px 14px;
                     width: 120px;

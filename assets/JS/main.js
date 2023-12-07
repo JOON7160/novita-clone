@@ -17,7 +17,7 @@ $(function(){
         type: "fraction",
         renderFraction: function (currentClass, totalClass) {
             return '<span class="' + currentClass + '"></span>' + //현재 페이지
-            ' <div class="swiper-pagination2"></div> ' + //progress-pagination 
+            ' <div class="swiper-pagination-progressbar"></div> ' + //progress-pagination 
             '<span class="' + totalClass + '"></span>' //총 페이지
             },
         },
@@ -38,7 +38,7 @@ $(function(){
     });
     var pagingSwiper = new Swiper(".event-prod-slide", {
         pagination: {
-        el: ".swiper-pagination2",
+        el: ".swiper-pagination-progressbar",
         type: "progressbar",
         },
         breakpoints: {
