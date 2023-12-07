@@ -15,6 +15,11 @@ $(function(){
         pagination: {
         el: ".swiper-pagination",
         type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + //현재 페이지
+            ' <div class="swiper-pagination2"></div> ' + //progress-pagination 
+            '<span class="' + totalClass + '"></span>' //총 페이지
+            },
         },
         breakpoints: {
             640: {
