@@ -43,6 +43,21 @@ body {
     line-height: 0;
     text-indent: -9999px;
 }
+/* Mixins */
+.title {
+    text-align: center;
+    margin-bottom: 50px;
+    h2 {
+        margin: 30px 0;
+    }
+    hr {
+        width: 3%;
+        border: 1px solid #000;
+    }
+    p {
+        color: #333;
+    }
+}
 /* floating-menu */
 .floating-menu {
     display: none;
@@ -480,7 +495,6 @@ main {
                         transform-origin: left top;
                         background: $primary-color;
                     }
-
                 }
                 
             }
@@ -518,9 +532,45 @@ main {
 }
 
 /* event-notice section */
-.event-notice {
-    height: 400px;
-    border: 1px solid purple;
+.event {
+    &-notice {
+        border: 1px solid purple;
+    }
+    &-cont {
+        display: flex;
+        border: 1px solid #000;
+        flex-wrap: wrap;
+        .caption {
+            writing-mode: vertical-rl;
+            // transform:rotate(180deg);
+            text-orientation:sideways;
+            margin-right: 5px;
+        }
+        .cont-s {
+            display: flex;
+            width: (100% / 3);
+            border: 1px solid red;
+            .event-desc {
+                width: 360px;
+                height: 580px;
+            }
+        }
+        &-promo {
+            display: flex;
+            // position: relative;
+            .event-slide {
+                border: 1px solid #000;
+                height: 400px;
+                width: 790px;
+            }
+        }
+        .cont {
+            &-L {
+                width: (100% *2/3);
+                border: 5px solid gold;
+            }
+        }
+    }
 }
 /* review section */
 .review {
@@ -756,20 +806,20 @@ main {
 }
 /* service section */
 .service {
-    .title {
-        text-align: center;
-        margin-bottom: 50px;
-        h2 {
-            margin: 30px 0;
-        }
-        hr {
-            width: 3%;
-            border: 1px solid #000;
-        }
-        p {
-            color: #333;
-        }
-    }
+    // .title {
+    //     text-align: center;
+    //     margin-bottom: 50px;
+    //     h2 {
+    //         margin: 30px 0;
+    //     }
+    //     hr {
+    //         width: 3%;
+    //         border: 1px solid #000;
+    //     }
+    //     p {
+    //         color: #333;
+    //     }
+    // }
     &-cont {
         display: flex;
         justify-content: center;

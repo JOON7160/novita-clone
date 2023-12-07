@@ -59,6 +59,22 @@ body {
   text-indent: -9999px;
 }
 
+/* Mixins */
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.title h2 {
+  margin: 30px 0;
+}
+.title hr {
+  width: 3%;
+  border: 1px solid #000;
+}
+.title p {
+  color: #333;
+}
+
 /* floating-menu */
 .floating-menu {
   display: none;
@@ -469,8 +485,38 @@ main {
 }
 /* event-notice section */
 .event-notice {
-  height: 400px;
   border: 1px solid purple;
+}
+.event-cont {
+  display: flex;
+  border: 1px solid #000;
+  flex-wrap: wrap;
+}
+.event-cont .caption {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  margin-right: 5px;
+}
+.event-cont .cont-s {
+  display: flex;
+  width: 33.3333333333%;
+  border: 1px solid red;
+}
+.event-cont .cont-s .event-desc {
+  width: 360px;
+  height: 580px;
+}
+.event-cont-promo {
+  display: flex;
+}
+.event-cont-promo .event-slide {
+  border: 1px solid #000;
+  height: 400px;
+  width: 790px;
+}
+.event-cont .cont-L {
+  width: 66.6666666667%;
+  border: 5px solid gold;
 }
 
 /* review section */
@@ -692,20 +738,6 @@ main {
   }
 }
 /* service section */
-.service .title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.service .title h2 {
-  margin: 30px 0;
-}
-.service .title hr {
-  width: 3%;
-  border: 1px solid #000;
-}
-.service .title p {
-  color: #333;
-}
 .service-cont {
   display: flex;
   justify-content: center;
