@@ -9,6 +9,36 @@ $(function(){
         $('header').removeClass('active');
         $('.gnb li').children('.sub').removeClass('active');
     })
+    //bestSeller swiper
+    const progressLine = document.querySelector('.autoplay-progress svg')
+    var bestSellerSwiper = new Swiper(".best-prod-slide", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+        clickable: true,
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + //현재 페이지
+            ' <div class="autoplay-progress"></div> ' + //progress-pagination 
+            '<span class="' + totalClass + '"></span>' //총 페이지
+            },
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+    on: {
+        autoplayTimeLeft(s, time, progress) {
+            progressLine.style.setProperty("--progress", 1 - progress)
+        }
+    }
+    });
     //eventProduct swiper
     var eventProdSwiper = new Swiper(".event-prod-slide", {
         slidesPerView: 1,

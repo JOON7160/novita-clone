@@ -323,7 +323,60 @@ main {
     border: 1px solid gold;
     text-align: center;
     .best-prod-slide {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .swiper-control {
+                display: block;
+                .autoplay-progress {
+                    position: relative;
+                    width: 50px;
+                    height: 3px;
+                    background: #e2e2e2;
+                    svg {
+                        --progress: 0;
+                        position: absolute;
+                        width: 100%;
+                        // height: 100%;
+                        top: 0;
+                        left: 0;
+                        z-index: 10;
+                        stroke-width: 4px;
+                        stroke: $primary-color;
+                        fill: none;
+                        stroke-dashoffset: calc(100 * (1 - var(--progress)));
+                        stroke-dasharray: 100;
+                    }
+                }
+                .fraction-pagination {
+                    padding: 11px 17px 11px 14px;
+                    width: 120px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+                .swiper-pagination {
+                    .swiper-pagination-total {
+                        color: #e2e2e2;
+                    }
+                }
+                .swiper-pagination-progressbar {
+                    position: relative;
+                    width: 50px;
+                    height: 3px;
+                    &-fill {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        transform-origin: left top;
+                        background: $primary-color;
+                    }       
+            }
+        }
         .swiper-wrapper {
+            display: flex;
             .swiper-slide {
                 position: relative;
                 .img {
@@ -419,6 +472,7 @@ main {
                 }
             }
         }
+        .swiper-control {}
     }
 }
 
