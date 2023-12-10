@@ -57,6 +57,59 @@ $(function(){
         },
     });
     eventProdSwiper.controller.control = pagingSwiper;
+
+    //eventNotiswiper
+    var eventNotiSwiper = new Swiper(".event-slide", {
+        slidesPerView: 1,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+        pagination: {
+        el: ".event-prod-pagination",
+        type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + //현재 페이지
+            ' <div class="swiper-pagination-progressbar"></div> ' + //progress-pagination 
+            '<span class="' + totalClass + '"></span>' //총 페이지
+            },
+        },
+        breakpoints: {
+            640: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            },
+            // 768: {
+            // slidesPerView: 4,
+            // spaceBetween: 40,
+            // },
+            1024: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            },
+        },
+    });
+    var notiPagingSwiper = new Swiper(".event-slide", {
+        pagination: {
+        el: ".swiper-pagination-progressbar",
+        type: "progressbar",
+        },
+        breakpoints: {
+            640: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            },
+            // 768: {
+            // slidesPerView: 4,
+            // spaceBetween: 40,
+            // },
+            1024: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            },
+        },
+    });
+    eventNotiSwiper.controller.control = notiPagingSwiper;
     //review swiper
     var reviewSwiper = new Swiper(".review-slide", {
         slidesPerView: 1,
