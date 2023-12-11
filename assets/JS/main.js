@@ -9,6 +9,7 @@ $(function(){
         $('header').removeClass('active');
         $('.gnb li').children('.sub').removeClass('active');
     })
+
     //mainSlide swiper
     var mainToggleBtn =$('.main-toggle-btn')
     var mainSwiper = new Swiper(".main-slide", {
@@ -31,20 +32,6 @@ $(function(){
             '<span class="' + totalClass + '"></span>' //총 페이지
             },
         },
-        breakpoints: {
-            640: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            },
-            // 768: {
-            // slidesPerView: 4,
-            // spaceBetween: 40,
-            // },
-            1024: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            },
-        },
     });
     mainToggleBtn.on ('click keydown',function(e){
         // Spacebar의 기본 동작 막기
@@ -62,7 +49,7 @@ $(function(){
         }
     
     });
-    toggleBtn.on('keydown', function (e) {
+    mainToggleBtn.on('keydown', function (e) {
         if (e.key === 'Enter') {
             // Enter 키 입력 시 클릭 이벤트를 발생시킴
             $(this).click();
