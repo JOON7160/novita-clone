@@ -302,7 +302,41 @@ main {
   overflow: hidden;
 }
 .best-seller .best-prod-slide .swiper-control {
-  display: block;
+  display: flex;
+  border: 1px solid #000;
+}
+.best-seller .best-prod-slide .swiper-control .swiper-arrow {
+  display: flex;
+  align-items: center;
+}
+.best-seller .best-prod-slide .swiper-control .swiper-arrow .swiper-button-control button {
+  width: 30px;
+  height: 30px;
+  background: none;
+}
+.best-seller .best-prod-slide .swiper-control .swiper-arrow .swiper-button-next,
+.best-seller .best-prod-slide .swiper-control .swiper-arrow .swiper-button-prev {
+  position: relative;
+  width: 10px;
+  height: 30px;
+  background: #fff;
+  cursor: pointer;
+}
+.best-seller .best-prod-slide .swiper-control .swiper-arrow .swiper-button-next::after,
+.best-seller .best-prod-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 10px;
+}
+.best-seller .best-prod-slide .swiper-control .swiper-arrow .swiper-button-next::after {
+  background: url(/assets/imgs/ico-sprites.svg) no-repeat -23px -211px;
+}
+.best-seller .best-prod-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
+  background: url(/assets/imgs/ico-sprites.svg) no-repeat -195px -211px;
 }
 .best-seller .best-prod-slide .swiper-control .autoplay-progress {
   position: relative;
