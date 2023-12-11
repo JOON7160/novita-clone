@@ -85,7 +85,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 150px;
+  height: 100px;
   transition: 0.3s;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.2784313725);
@@ -324,11 +324,15 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
 }
 
 /*find section */
+.find {
+  padding-top: 120px;
+}
 .find .title {
   text-align: center;
   margin: 30px 0;
 }
 .find .title h2 {
+  font-size: 30px;
   margin: 30px 0;
 }
 .find-link {
@@ -341,6 +345,7 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   display: flex;
   width: 100%;
   overflow: hidden;
+  margin-top: 100px;
 }
 .find-slide .imgs {
   display: flex;
@@ -376,7 +381,12 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
 }
 /* best-seller section */
 .best-seller {
+  padding-top: 120px;
   text-align: center;
+}
+.best-seller h2 {
+  font-size: 40px;
+  margin-bottom: 35px;
 }
 .best-seller .best-prod-slide {
   position: relative;
@@ -562,6 +572,9 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
 }
 
 /* event-product section */
+.event-product {
+  padding-top: 120px;
+}
 .event-product h2 {
   text-align: center;
   font-size: 35px;
@@ -748,6 +761,9 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   }
 }
 /* event-notice section */
+.event-notice {
+  padding-top: 120px;
+}
 .event-slide {
   position: relative;
   width: 100%;
@@ -878,7 +894,7 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
 
 /* review section */
 .review {
-  margin: 100px 0;
+  padding-top: 120px;
 }
 .review h2 {
   font-size: 40px;
@@ -1095,6 +1111,12 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   }
 }
 /* service section */
+.service {
+  padding-top: 120px;
+}
+.service h2 {
+  font-size: 40px;
+}
 .service-cont {
   display: flex;
   justify-content: center;
@@ -1146,7 +1168,7 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
 
 /* info section */
 .info {
-  margin: 50px 0;
+  padding-top: 120px;
 }
 .info-innovation {
   position: relative;
