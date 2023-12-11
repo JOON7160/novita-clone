@@ -262,8 +262,101 @@ header {
 
 /* main */
 main {
-    height: 500px;
-    border: 1px solid red;
+    .main-slide {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        .swiper-wrapper {
+            display: flex;
+            width: 400%;
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                video {
+                    width: 100%;
+                    height: 100%;
+                }
+                .desc {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    text-align: center;
+                    color: #fff;
+                    h2 {
+                        font-size: 80px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        .swiper-control {
+            display: flex;
+            justify-content: space-between;
+            width: 120px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+            .swiper-pagination {
+                .swiper-pagination-total {
+                    color: #e2e2e2;
+                }
+                display: flex;
+                align-items: center;
+                &-progressbar {
+                    margin: 0 5px;
+                    width: 30px;
+                    height: 3px;
+                    background: #818181;
+                    &-fill {
+    
+                    }
+                }
+            }
+            .swiper-arrow {
+                justify-content: center;
+                width: 100px;
+                display: flex;
+                align-items: center;
+                .swiper-button-control {
+                    button {
+                        width: 30px;
+                        height: 30px;
+                        background:none;
+                    }
+                }
+                .swiper-button-next,
+                .swiper-button-prev {
+                position: relative;
+                width: 10px;
+                height: 30px;
+                cursor: pointer;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    width: 6px;
+                    height: 10px;
+                }
+                }
+                .swiper-button-next {
+                    &::after {
+                        background: url(/assets/imgs/ico-sprites.svg)no-repeat -23px -211px;
+                    }
+                }
+                .swiper-button-prev {
+                    &::after {
+                        background: url(/assets/imgs/ico-sprites.svg)no-repeat -195px -211px;
+                    }
+                }
+            }
+        }
+    }
 }
 /*find section */
 .find {

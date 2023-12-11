@@ -9,6 +9,65 @@ $(function(){
         $('header').removeClass('active');
         $('.gnb li').children('.sub').removeClass('active');
     })
+    //mainSlide swiper
+    var mainToggleBtn =$('.main-toggle-btn')
+    var mainSwiper = new Swiper(".main-slide", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 8000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + //현재 페이지
+            ' <div class="swiper-pagination-progressbar"></div> ' + //progress-pagination 
+            '<span class="' + totalClass + '"></span>' //총 페이지
+            },
+        },
+        breakpoints: {
+            640: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            },
+            // 768: {
+            // slidesPerView: 4,
+            // spaceBetween: 40,
+            // },
+            1024: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            },
+        },
+    });
+    mainToggleBtn.on ('click keydown',function(e){
+        // Spacebar의 기본 동작 막기
+            if (e.type === 'keydown' && e.key === ' ') {
+                e.preventDefault();
+            }
+            if ((e.type === 'click' && e.button === 0) || (e.type === 'keydown' && e.key === ' ')) {
+            if (mainSwiper.autoplay.running) {
+                mainSwiper.autoplay.stop();
+                $('.main-toggle-btn .fa-solid').removeClass('fa-play').addClass('fa-pause')
+            } else {
+                mainSwiper.autoplay.start();
+                $('.main-toggle-btn .fa-solid').removeClass('fa-pause').addClass('fa-play')
+            }
+        }
+    
+    });
+    toggleBtn.on('keydown', function (e) {
+        if (e.key === 'Enter') {
+            // Enter 키 입력 시 클릭 이벤트를 발생시킴
+            $(this).click();
+        }
+    });
     //bestSeller swiper
     const progressLine = document.querySelector('.autoplay-progress svg')
     var toggleBtn =$('.toggle-btn')
