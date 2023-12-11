@@ -432,6 +432,7 @@ main {
                     .prod-info {
                         width: 320px;
                         text-align: left;
+                        word-break: keep-all;
                         color: #fff;
                         strong {
                             font-size: 56px;
@@ -450,6 +451,7 @@ main {
                         }
                     }
                     .prod-review {
+                        width: 350px;
                         color: #fff;
                         .review {
                             word-break: keep-all;

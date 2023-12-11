@@ -398,6 +398,7 @@ main {
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-info {
   width: 320px;
   text-align: left;
+  word-break: keep-all;
   color: #fff;
 }
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-info strong {
@@ -416,6 +417,7 @@ main {
   word-break: kepp-all;
 }
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-review {
+  width: 350px;
   color: #fff;
 }
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-review .review {
