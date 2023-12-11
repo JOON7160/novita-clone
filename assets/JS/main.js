@@ -11,12 +11,12 @@ $(function(){
     })
     //bestSeller swiper
     const progressLine = document.querySelector('.autoplay-progress svg')
-    var toggleBtn =$('.toggle-btn i')
+    var toggleBtn =$('.toggle-btn')
     var bestSellerSwiper = new Swiper(".best-prod-slide", {
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
-        delay: 2500,
+        delay: 8000,
         disableOnInteraction: false,
     },
     loop: true,
@@ -41,14 +41,17 @@ $(function(){
     // }
 });
     toggleBtn.on ('click keydown',function(e){
-        console.log('Event target', e.target);
-        if ((e.type === 'click' && e.button === 0) || (e.type === 'keydown' && (e.key === 'Enter' || e.key === ' '))) {
+        // Spacebar의 기본 동작 막기
+            if (e.type === 'keydown' && e.key === ' ') {
+                e.preventDefault();
+            }
+            if ((e.type === 'click' && e.button === 0) || (e.type === 'keydown' && e.key === ' ')) {
             if (bestSellerSwiper.autoplay.running) {
                 bestSellerSwiper.autoplay.stop();
-                $('.toggle-btn i').removeClass('fa-play').addClass('fa-pause')
+                $('.toggle-btn .fa-solid').removeClass('fa-play').addClass('fa-pause')
             } else {
                 bestSellerSwiper.autoplay.start();
-                $('.toggle-btn i').removeClass('fa-pause').addClass('fa-play')
+                $('.toggle-btn .fa-solid').removeClass('fa-pause').addClass('fa-play')
             }
         }
     
