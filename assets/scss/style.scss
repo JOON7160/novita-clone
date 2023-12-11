@@ -327,7 +327,48 @@ main {
         height: 100%;
         overflow: hidden;
         .swiper-control {
-                display: block;
+                display: flex;
+                border: 1px solid #000;
+                .swiper-arrow {
+                    display: flex;
+                    align-items: center;
+                    .swiper-button-control {
+                        button {
+                            width: 30px;
+                            height: 30px;
+                            background:none;
+                        }
+                    }
+                    .swiper-button-next,
+                    .swiper-button-prev {
+                    position: relative;
+                    width: 10px;
+                    height: 30px;
+                    background: #fff;
+                    cursor: pointer;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 6px;
+                        height: 10px;
+                    }
+                    }
+                    .swiper-button-next {
+                        &::after {
+                            background: url(/assets/imgs/ico-sprites.svg)no-repeat -23px -211px;
+                        }
+                    }
+                    .swiper-button-prev {
+                        &::after {
+                            background: url(/assets/imgs/ico-sprites.svg)no-repeat -195px -211px;
+                        }
+                    }
+                }
+                    // }
+                
                 .autoplay-progress {
                     position: relative;
                     width: 50px;

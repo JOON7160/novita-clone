@@ -1,6 +1,5 @@
 {
-  "liveSassCompile.settings.includeItems": [
-
-],
-"liveSassCompile.settings.useNewCompiler": false
+  "liveSassCompile.settings.includeItems": [],
+  "liveSassCompile.settings.useNewCompiler": false,
+  "livePreview.defaultPreviewPath": "/index.html"
 }

@@ -11,6 +11,7 @@ $(function(){
     })
     //bestSeller swiper
     const progressLine = document.querySelector('.autoplay-progress svg')
+    var toggleBtn =$('.toggle-btn i')
     var bestSellerSwiper = new Swiper(".best-prod-slide", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -33,11 +34,30 @@ $(function(){
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
     },
-    on: {
-        autoplayTimeLeft(s, time, progress) {
-            progressLine.style.setProperty("--progress", 1 - progress)
+    // on: {
+    //     autoplayTimeLeft(s, time, progress) {
+    //         progressLine.style.setProperty("--progress", 1 - progress)
+    //     }
+    // }
+});
+    toggleBtn.on ('click keydown',function(e){
+        console.log('Event target', e.target);
+        if ((e.type === 'click' && e.button === 0) || (e.type === 'keydown' && (e.key === 'Enter' || e.key === ' '))) {
+            if (bestSellerSwiper.autoplay.running) {
+                bestSellerSwiper.autoplay.stop();
+                $('.toggle-btn i').removeClass('fa-play').addClass('fa-pause')
+            } else {
+                bestSellerSwiper.autoplay.start();
+                $('.toggle-btn i').removeClass('fa-pause').addClass('fa-play')
+            }
         }
-    }
+    
+    });
+    toggleBtn.on('keydown', function (e) {
+        if (e.key === 'Enter') {
+            // Enter 키 입력 시 클릭 이벤트를 발생시킴
+            $(this).click();
+        }
     });
     //eventProduct swiper
     var eventProdSwiper = new Swiper(".event-prod-slide", {
