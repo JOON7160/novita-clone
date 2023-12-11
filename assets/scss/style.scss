@@ -320,7 +320,6 @@ main {
 
 /* best-seller section */
 .best-seller {
-    border: 1px solid gold;
     text-align: center;
     .best-prod-slide {
         width: 100%;
@@ -328,7 +327,6 @@ main {
         overflow: hidden;
         .swiper-control {
                 display: flex;
-                border: 1px solid #000;
                 .swiper-arrow {
                     display: flex;
                     align-items: center;
@@ -344,7 +342,6 @@ main {
                     position: relative;
                     width: 10px;
                     height: 30px;
-                    background: #fff;
                     cursor: pointer;
                     &::after {
                         content: "";

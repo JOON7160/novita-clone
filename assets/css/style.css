@@ -293,7 +293,6 @@ main {
 }
 /* best-seller section */
 .best-seller {
-  border: 1px solid gold;
   text-align: center;
 }
 .best-seller .best-prod-slide {
@@ -303,7 +302,6 @@ main {
 }
 .best-seller .best-prod-slide .swiper-control {
   display: flex;
-  border: 1px solid #000;
 }
 .best-seller .best-prod-slide .swiper-control .swiper-arrow {
   display: flex;
@@ -319,7 +317,6 @@ main {
   position: relative;
   width: 10px;
   height: 30px;
-  background: #fff;
   cursor: pointer;
 }
 .best-seller .best-prod-slide .swiper-control .swiper-arrow .swiper-button-next::after,
