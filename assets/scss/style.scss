@@ -183,6 +183,9 @@ body {
         }
     }
 }
+.container {
+    overflow: hidden;
+}
 /* header */
 header {
     position: absolute;
@@ -242,6 +245,9 @@ header {
         margin-right: auto;
         >li { 
             margin: 0 30px;
+            // &:focus-within .sub {
+            //     display: block;
+            // }
             > a {
                 position: relative;
                 font-family: $font-eg;

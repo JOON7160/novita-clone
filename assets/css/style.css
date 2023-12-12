@@ -198,6 +198,10 @@ body {
   height: 100%;
 }
 
+.container {
+  overflow: hidden;
+}
+
 /* header */
 header {
   position: absolute;
