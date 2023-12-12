@@ -415,30 +415,52 @@ main {
         }
         .swiper-control {
             display: flex;
-            justify-content: space-between;
-            width: 120px;
+            justify-content: space-around;
+            align-items: center;
+            width: 200px;
             position: absolute;
             bottom: 0;
             left: 0;
-            background: #fff;
+            .pagination-control {
+                position: relative;
+                .swiper-pagination {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100px;
+                }
+            }
+            .autoplay-progress {
+                position: absolute;
+                top: 45%;
+                left: 15%;
+                width: 70px;
+                height: 3px;background-color: #0000008e;
+                svg {
+                    --progress: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 10;
+                    width: 100%;
+                    stroke-width: 10px;
+                    stroke: #fff;
+                    fill: none;
+                    stroke-dashoffset: calc(100 * (1 - var(--progress)));
+                    stroke-dasharray: 100;
+                }
+            }
             .swiper-pagination {
+                color: #fff;
+                font-family: $font-eg;
                 .swiper-pagination-total {
-                    color: #e2e2e2;
+                    color: #fff;
                 }
                 display: flex;
                 align-items: center;
-                &-progressbar {
-                    margin: 0 5px;
-                    width: 30px;
-                    height: 3px;
-                    background: #818181;
-                    &-fill {
-                    }
-                }
             }
             .swiper-arrow {
                 justify-content: center;
-                width: 100px;
+                width: 50px;
                 display: flex;
                 align-items: center;
                 .swiper-button-control {
@@ -446,6 +468,9 @@ main {
                         width: 30px;
                         height: 30px;
                         background:none;
+                        .fa-solid {
+                            color: #fff;
+                        }
                     }
                 }
                 .swiper-button-next,
@@ -467,11 +492,13 @@ main {
                 .swiper-button-next {
                     &::after {
                         background: url(../imgs/ico-sprites.svg)no-repeat -23px -211px;
+                        filter: invert(100%);
                     }
                 }
                 .swiper-button-prev {
                     &::after {
-                        background: url(../imgs/ico-sprites.svg)no-repeat -195px -211px;
+                        background:  url(../imgs/ico-sprites.svg)no-repeat -195px -211px;
+                        filter: invert(100%);
                     }
                 }
             }
