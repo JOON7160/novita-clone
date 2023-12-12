@@ -14,6 +14,7 @@ h1,h2,h3,h4,h5,h6 {margin: 0;}
 button {border: none;cursor: pointer;}
 
 /* common css */
+html {scroll-behavior: smooth;}
 body {
     margin: 0;
     padding: 0;
@@ -63,7 +64,7 @@ body {
 .floating-menu {
     position: fixed;
     right: 2%;
-    bottom: 0;
+    bottom: 3%;
     z-index: 1000;
     // display: none;
     .chat-menu {
@@ -169,12 +170,21 @@ body {
         }
     }
     .top-btn {
-
+        display: none;
+        margin-top: 10px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: url(../imgs/img-sprites.png)no-repeat -480px -40px;;
+        cursor: pointer;
+        a {
+            display: block;
+            height: 100%;
+        }
     }
 }
 /* header */
 header {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -213,7 +223,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        max-width: 1760px;
+        max-width: 1700px;
         min-width: 1200px;
         height: inherit;
         margin: 0 auto;

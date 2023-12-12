@@ -1,4 +1,12 @@
 $(function(){
+    //top-btn
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 100) {
+            $('.top-btn').fadeIn()
+        } else {
+            $('.top-btn').fadeOut()
+        }
+    })
     // GNB 
     $('.gnb > li > a').mouseenter(function(){
         $('header').addClass('active');
