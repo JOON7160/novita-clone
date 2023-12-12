@@ -69,7 +69,8 @@ $(function(){
         }
     });
     //bestSeller swiper
-    var toggleBtn =$('.toggle-btn')
+    const progressBar = $('.autoplay-progress svg')
+    var toggleBtn =$('.best-toggle-btn')
     var bestSellerSwiper = new Swiper(".best-prod-slide", {
     spaceBetween: 30,
     centeredSlides: true,
@@ -84,7 +85,6 @@ $(function(){
         clickable: true,
         renderFraction: function (currentClass, totalClass) {
             return '<span class="' + currentClass + '"></span>' + //현재 페이지
-            ' <div class="autoplay-progress"></div> ' + //progress-pagination 
             '<span class="' + totalClass + '"></span>' //총 페이지
             },
     },
@@ -92,11 +92,11 @@ $(function(){
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
     },
-    // on: {
-    //     autoplayTimeLeft(s, time, progress) {
-    //         progressLine.style.setProperty("--progress", 1 - progress)
-    //     }
-    // }
+    on: {
+        autoplayTimeLeft(s, time, prodProgress) {
+            progressBar.css("--prodProgress", 1 - prodProgress)
+        }
+    }
 });
     toggleBtn.on ('click keydown',function(e){
         // Spacebar의 기본 동작 막기
