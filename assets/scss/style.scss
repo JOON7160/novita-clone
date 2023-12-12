@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;600&display=swap');
 
+
 //variables
 $font-kr: 'Noto Sans KR', sans-serif;
 $font-eg: 'Kumbh Sans', sans-serif;
@@ -60,9 +61,116 @@ body {
 }
 /* floating-menu */
 .floating-menu {
-    display: none;
-    .chat {
+    position: fixed;
+    right: 2%;
+    bottom: 0;
+    z-index: 1000;
+    // display: none;
+    .chat-menu {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: $primary-color;
+        input[id=chat] {
+            opacity: 0;
+        }
+        label[for=chat] {
+            cursor: pointer;
+            &::after {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 100;
+                content: "";
+                background: url(../imgs/img-sprites.png)no-repeat -560px -40px;
+                width: 70px;
+                height: 70px;
+                opacity: 1;
+                transition: 0.5s;
+            }
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 1px solid #000;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            transition: 0.5s;
+            // visibility: hidden;
+            // opacity: 0;
+            span {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 35px;
+                height: 2px;
+                background: #fff;
+                &:nth-of-type(1) {
+                    transform: translate(-50%,-50%) rotate(45deg);
+                }
+                &:nth-of-type(2) {
+                    transform: translate(-50%,-50%) rotate(-45deg);
+                }
+            }
+        }
+        input[id=chat]:checked ~ label[for=chat]::after {
+            opacity: 0;
+        }
+        input[id=chat]:checked ~ label[for=chat]{
+            transform: translate(-50%,-50%) rotate(180deg);
+            visibility: visible;
+            opacity: 1;
 
+        }
+        .link {
+            display: none;
+            position: absolute;
+            top: -200%;
+            left: -200%;
+            .call-num {
+                &::after {
+                    top: 32%;
+                    left: 4%;
+                    background: url(../imgs/ico-sprites.svg)no-repeat -189px -536px;
+
+                }
+            }
+            .writing {
+                &::after {
+                    top: 32%;
+                    left: 5%;
+                    background: url(../imgs/ico-sprites.svg)no-repeat -229px -537px;
+                    
+                }
+            }
+            .call-num,
+            .writing {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 18px;
+                    height: 17px;
+                }
+                position: relative;
+                text-align: center;
+                display: inline-block;
+                background: #fff;
+                box-shadow: 0 0 10px #0000003d;
+                width: 200px;
+                padding: 15px 20px;
+                border-radius: 20px;
+                margin-top: 20px;
+                a {
+                    color: #000;
+                }
+                span {
+                    color: $primary-color;
+                }
+            }
+        }
     }
     .top-btn {
 
@@ -70,6 +178,7 @@ body {
 }
 /* header */
 header {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -312,7 +421,6 @@ main {
                     height: 3px;
                     background: #818181;
                     &-fill {
-    
                     }
                 }
             }
