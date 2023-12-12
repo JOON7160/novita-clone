@@ -8,12 +8,12 @@ $(function(){
         }
     })
     // GNB 
-    $('.gnb > li > a').mouseenter(function(){
+    $('.gnb > li > a').on('mouseenter focus',function(){
         $('header').addClass('active');
         $('.gnb li').children('.sub').removeClass('active');
         $(this).siblings('.sub').addClass('active');
     })
-    $('header').mouseleave(function(){
+    $('header').on('mouseenter focus',function(){
         $('header').removeClass('active');
         $('.gnb li').children('.sub').removeClass('active');
     })
