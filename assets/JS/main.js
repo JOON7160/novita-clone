@@ -17,8 +17,8 @@ $(function(){
         $('header').removeClass('active');
         $('.gnb li').children('.sub').removeClass('active');
     })
-
     //mainSlide swiper
+    const progressLine = $('.autoplay-progress svg')
     var mainToggleBtn =$('.main-toggle-btn')
     var mainSwiper = new Swiper(".main-slide", {
         slidesPerView: 1,
@@ -32,14 +32,19 @@ $(function(){
             prevEl: ".swiper-button-prev"
         },
         pagination: {
-        el: ".swiper-pagination",
+        el: ".main-slide .swiper-pagination",
         type: "fraction",
         renderFraction: function (currentClass, totalClass) {
             return '<span class="' + currentClass + '"></span>' + //현재 페이지
-            ' <div class="swiper-pagination-progressbar"></div> ' + //progress-pagination 
+            '  ' +
             '<span class="' + totalClass + '"></span>' //총 페이지
             },
         },
+        on: {
+            autoplayTimeLeft(s,time,progress) {
+                progressLine.css('--progress',1-progress)
+            }
+        }
     });
     mainToggleBtn.on ('click keydown',function(e){
         // Spacebar의 기본 동작 막기
@@ -64,7 +69,6 @@ $(function(){
         }
     });
     //bestSeller swiper
-    const progressLine = document.querySelector('.autoplay-progress svg')
     var toggleBtn =$('.toggle-btn')
     var bestSellerSwiper = new Swiper(".best-prod-slide", {
     spaceBetween: 30,
