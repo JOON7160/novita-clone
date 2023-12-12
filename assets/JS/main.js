@@ -13,7 +13,7 @@ $(function(){
         $('.gnb li').children('.sub').removeClass('active');
         $(this).siblings('.sub').addClass('active');
     })
-    $('header').on('mouseenter focus',function(){
+    $('header').on('mouseleave blur',function(){
         $('header').removeClass('active');
         $('.gnb li').children('.sub').removeClass('active');
     })
