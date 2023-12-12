@@ -881,7 +881,19 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
 }
 /* event-notice section */
 .event-notice {
+  position: relative;
   padding-top: 120px;
+}
+.event-notice .event-bg {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  width: 100%;
+  height: 790px;
+  background: rgba(237, 228, 225, 0.6117647059);
+  z-index: -1;
+  transition: 1s;
+  transform: translateX(100%);
 }
 .event-slide {
   position: relative;
