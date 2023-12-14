@@ -260,6 +260,28 @@ body {
 .gnb__item--link:hover::after {
   width: 100%;
 }
+.gnb__item--position1 .gnb__depth {
+  margin-left: 366px;
+}
+.gnb__item--position2 .gnb__depth {
+  margin-left: 500px;
+}
+.gnb__item--position2 .gnb__depth2 {
+  margin-top: 10px;
+}
+.gnb__item--position2 .gnb__depth2--link {
+  color: #333;
+}
+.gnb__item--position3 .gnb__depth {
+  margin-left: 670px;
+}
+.gnb__item--position4 .gnb__depth {
+  margin-left: 810px;
+}
+.gnb__item--position5 .gnb__depth {
+  margin-left: 300px;
+  text-align: center;
+}
 .gnb__sub {
   display: none;
   transition: 0.3s;
@@ -301,6 +323,25 @@ body {
   color: #777;
 }
 
+.util {
+  display: flex;
+}
+.util__item {
+  margin-right: 10px;
+}
+.util__item--link {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 13px;
+}
+.util__item--badge {
+  color: #fff;
+  background: #772480;
+  border-radius: 50%;
+  padding: 1px 5px;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -327,49 +368,9 @@ body {
 .header--active .logo__link {
   background-position: -80px -120px;
 }
-.header--active .gnb__item--link {
+.header--active .gnb__item--link,
+.header--active .util__item--link {
   color: #333;
-}
-
-header.active .util li a {
-  color: #333;
-}
-header .gnb .prod1 .depth {
-  left: 366px;
-}
-header .gnb .prod2 .depth {
-  margin-left: 500px;
-}
-header .gnb .prod2 .depth2 {
-  margin-top: 10px;
-}
-header .gnb .prod3 .depth {
-  margin-left: 670px;
-}
-header .gnb .prod4 .depth {
-  margin-left: 810px;
-}
-header .gnb .prod5 .depth {
-  margin-left: 300px;
-  text-align: center;
-}
-header .util {
-  display: flex;
-}
-header .util li {
-  margin-right: 10px;
-}
-header .util li a {
-  font-family: "Kumbh Sans", sans-serif;
-  font-weight: bold;
-  color: #fff;
-  font-size: 13px;
-}
-header .util li a .badge {
-  color: #fff;
-  background: #772480;
-  border-radius: 50%;
-  padding: 1px 5px;
 }
 
 /* main */

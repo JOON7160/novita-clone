@@ -241,6 +241,38 @@ body {
                 }
             }
         }
+        &--position1 {
+            .gnb__depth {
+                margin-left:366px;
+            }
+        }
+        &--position2 {
+            .gnb__depth {
+                margin-left: 500px;
+                &2 {
+                    margin-top: 10px;
+                    &--link {
+                        color: #333;
+                    }
+                }
+            }
+        }
+        &--position3 {
+            .gnb__depth {
+                margin-left:670px;
+            }
+        }
+        &--position4 {
+            .gnb__depth {
+                margin-left:810px;
+            }
+        }
+        &--position5 {
+            .gnb__depth {
+                margin-left:300px;
+                text-align: center;
+            }
+        }
     }
     &__sub {
         display: none;
@@ -283,6 +315,25 @@ body {
         color: #777;
     }
 }
+.util {
+    display: flex;
+    &__item {
+        margin-right: 10px;
+        &--link {
+            font-family: $font-eg;
+            font-weight: bold;
+            color: #fff;
+            font-size: 13px;
+        }
+        &--badge {
+            color: #fff;
+            background: $primary-color;
+            border-radius: 50%;
+            padding: 1px 5px;
+        }
+        
+    }
+}
 .header {
     position: absolute;
     top: 0;
@@ -307,106 +358,9 @@ body {
         .logo__link {
             background-position: -80px -120px;
         }
-        .gnb__item--link {color: #333;}
-    }
-}
-header {
-    &.active {
-        .util {
-            li {
-                
-                a {
-                    color: #333;
-                }
-            }
-        }
-    }
-    .gnb {
+        .gnb__item--link,
+        .util__item--link {color: #333;}
         
-        >li { 
-            .gnb__sub {
-                
-                .depth {
-                    
-                    >li {
-                        
-                        
-                        >a {
-                            
-                        }
-                    }
-                }
-                .depth2 {
-                    li {
-                        a {
-                            
-                        }
-                    }
-                }
-                &.active {
-                    
-                    // &::after {
-                    //     position: absolute;
-                    //     left: 0;
-                    //     bottom: 2px;
-                    //     content: "";
-                    //     display: block;
-                    //     width: 100%;
-                    //     height: 1px;
-                    //     box-shadow: 0 0 10px #0000005a;
-                    // }
-                }
-            }
-        }
-        .prod1 {
-            .depth {
-                // margin-left:366px;
-                left: 366px;
-            }
-        }
-        .prod2 {
-            .depth {
-                margin-left: 500px;
-                &2 {
-                    margin-top: 10px;
-                }
-            }
-        }
-        .prod3 {
-            .depth {
-                margin-left: 670px;
-            }
-        }
-        .prod4 {
-            .depth {
-                margin-left:810px;
-            }
-        }
-        .prod5 {
-            .depth {
-                margin-left: 300px;
-                text-align: center;
-            }
-        }
-    }
-    .util {
-        display: flex;
-        li {
-            margin-right: 10px;
-            a {
-                font-family: $font-eg;
-                font-weight: bold;
-                color: #fff;
-                font-size: 13px;
-                .badge {
-                    color: #fff;
-                    background: $primary-color;
-                    border-radius: 50%;
-                    padding: 1px 5px;
-                }
-            }
-            
-        }
     }
 }
 
