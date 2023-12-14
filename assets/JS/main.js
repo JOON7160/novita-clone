@@ -8,14 +8,14 @@ $(function(){
         }
     })
     // GNB 
-    $('.gnb > li > a').on('mouseenter focus',function(){
+    $('.gnb__item--link').on('mouseenter focus',function(){
         $('header').addClass('header--active');
-        $('.gnb li').children('.sub').removeClass('header--active');
-        $(this).siblings('.sub').addClass('header--active');
+        $('.gnb__item').children('.gnb__sub').removeClass('gnb__sub--active');
+        $(this).siblings('.gnb__sub').addClass('gnb__sub--active');
     })
     $('header').on('mouseleave blur',function(){
         $('header').removeClass('header--active');
-        $('.gnb li').children('.sub').removeClass('header--active');
+        $('.gnb__item').children('.gnb__sub').removeClass('gnb__sub--active');
     })
     //mainSlide swiper
     const progressLine = $('.autoplay-progress svg')

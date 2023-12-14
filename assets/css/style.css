@@ -228,6 +228,79 @@ body {
   display: block;
 }
 
+.gnb {
+  display: flex;
+  margin-right: auto;
+}
+.gnb__item {
+  margin: 0 30px;
+}
+.gnb__item--link {
+  position: relative;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  width: 100%;
+  padding-bottom: 62px;
+}
+.gnb__item--link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #772480;
+  transition: 0.3s;
+}
+.gnb__item--link:hover {
+  color: #772480;
+}
+.gnb__item--link:hover::after {
+  width: 100%;
+}
+.gnb__sub {
+  display: none;
+  transition: 0.3s;
+}
+.gnb__sub--active {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 30px 0;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.0392156863);
+  z-index: 1000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.062745098);
+}
+.gnb__depth {
+  position: relative;
+  display: flex;
+}
+.gnb__depth--item {
+  width: 150px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+.gnb__depth--link {
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+.gnb__depth--link:hover {
+  color: #772480;
+}
+.gnb .gnb__depth2--link {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 15px;
+  color: #777;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -254,84 +327,12 @@ body {
 .header--active .logo__link {
   background-position: -80px -120px;
 }
-
-header.active .gnb li a {
-  color: #000;
-}
-header.active .util li a {
-  color: #000;
-}
-header .gnb {
-  display: flex;
-  margin-right: auto;
-}
-header .gnb > li {
-  margin: 0 30px;
-}
-header .gnb > li > a {
-  position: relative;
-  font-family: "Kumbh Sans", sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  color: #fff;
-  width: 100%;
-  padding-bottom: 62px;
-}
-header .gnb > li > a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background: #772480;
-  transition: 0.3s;
-}
-header .gnb > li:hover a {
-  color: #772480;
-}
-header .gnb > li:hover a::after {
-  width: 100%;
-}
-header .gnb > li .sub {
-  display: none;
-  transition: 0.3s;
-}
-header .gnb > li .sub .depth {
-  position: relative;
-  display: flex;
-}
-header .gnb > li .sub .depth > li {
-  width: 150px;
-  margin-right: 10px;
-  white-space: nowrap;
-}
-header .gnb > li .sub .depth > li > a {
+.header--active .gnb__item--link {
   color: #333;
-  font-size: 16px;
-  font-weight: 500;
 }
-header .gnb > li .sub .depth > li > a:hover {
-  color: #772480;
-}
-header .gnb > li .sub .depth2 li a {
-  display: inline-block;
-  width: 100%;
-  padding: 10px 0;
-  font-size: 15px;
-  color: #777;
-}
-header .gnb > li .sub.active {
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding: 30px 0;
-  background: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.0392156863);
-  z-index: 1000;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.062745098);
+
+header.active .util li a {
+  color: #333;
 }
 header .gnb .prod1 .depth {
   left: 366px;
