@@ -20,7 +20,9 @@ $(function(){
     //mainSlide swiper
     const progressLine = $('.autoplay-progress svg')
     var mainToggleBtn =$('.main-toggle-btn')
-    var mainSwiper = new Swiper(".main-slide", {
+    var mainSwiper = new Swiper(".main__swiper.swiper", {
+        wrapperClass: 'main__swiper--wrapper',
+        slideClass: 'main__swiper--slide', 
         slidesPerView: 1,
         loop: true,
         autoplay: {
@@ -32,7 +34,7 @@ $(function(){
             prevEl: ".swiper-button-prev"
         },
         pagination: {
-        el: ".main-slide .swiper-pagination",
+        el: ".main__swiper .swiper-pagination",
         type: "fraction",
         renderFraction: function (currentClass, totalClass) {
             return '<span class="' + currentClass + '"></span>' + //현재 페이지
