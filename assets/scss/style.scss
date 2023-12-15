@@ -241,9 +241,6 @@ header {
         margin-right: auto;
         >li { 
             margin: 0 30px;
-            // &:focus-within .sub {
-            //     display: block;
-            // }
             > a {
                 position: relative;
                 font-family: $font-eg;
@@ -312,16 +309,6 @@ header {
                     border-top: 1px solid #0000000a;
                     z-index: 1000;
                     box-shadow: 0 5px 10px #00000010;
-                    // &::after {
-                    //     position: absolute;
-                    //     left: 0;
-                    //     bottom: 2px;
-                    //     content: "";
-                    //     display: block;
-                    //     width: 100%;
-                    //     height: 1px;
-                    //     box-shadow: 0 0 10px #0000005a;
-                    // }
                 }
             }
         }
@@ -494,6 +481,7 @@ main {
                     &::after {
                         background: url(../imgs/ico-sprites.svg)no-repeat -23px -211px;
                         filter: invert(100%);
+                        
                     }
                 }
                 .swiper-button-prev {

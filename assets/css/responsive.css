@@ -2,7 +2,7 @@
   .inner {
     width: 100%;
   }
-  header, main, .find, .event-product, .event-notice,
+  main, .find, .event-product, .best-seller, .event-notice,
   .review, .service, .info, footer {
     display: none;
   }
@@ -12,6 +12,95 @@
   }
   .container {
     overflow: visible;
+  }
+  /* header */
+  header {
+    width: 100%;
+  }
+  header .header-inner {
+    padding: 0 10px;
+    max-width: 1260px;
+    min-width: 340px;
+    width: 100%;
+    margin: 0;
+  }
+  header .logo {
+    margin-right: 0;
+  }
+  header .logo a {
+    background: url(../imgs/mo-logo.png) no-repeat center center;
+    background-size: contain;
+    width: 86px;
+  }
+  header .util {
+    display: none;
+  }
+  header .mo-util {
+    display: flex;
+    gap: 10px;
+  }
+  header .mo-util .cart {
+    display: inline-block;
+    background: url(../imgs/img-sprites.png) no-repeat -520px 0;
+    width: 18px;
+    height: 19px;
+  }
+  header .mo-util .trigger {
+    position: relative;
+    width: 24px;
+    height: 17px;
+    cursor: pointer;
+  }
+  header .mo-util .trigger span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s;
+  }
+  header .mo-util .trigger span:nth-of-type(1) {
+    top: 0;
+  }
+  header .mo-util .trigger span:nth-of-type(2) {
+    top: 50%;
+    width: 80%;
+  }
+  header .mo-util .trigger span:nth-of-type(3) {
+    top: 100%;
+  }
+  header .mo-util input[id=trigger] {
+    display: none;
+  }
+  header .mo-util input[id=trigger]:checked ~ .trigger span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  header .mo-util input[id=trigger]:checked ~ .trigger span:nth-of-type(2) {
+    opacity: 0;
+  }
+  header .mo-util input[id=trigger]:checked ~ .trigger span:nth-of-type(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  /* main */
+  main .main-slide .swiper-wrapper .swiper-slide video {
+    object-fit: cover;
+    height: 100vh;
+  }
+  main .main-slide .swiper-wrapper .swiper-slide .desc h2 {
+    font-size: 60px;
+  }
+  main .main-slide .swiper-control {
+    bottom: 5%;
+  }
+  main .main-slide .swiper-control .swiper-arrow .swiper-button-control button .fa-solid {
+    font-size: 25px;
+  }
+  main .main-slide .swiper-control .swiper-arrow .swiper-button-next,
+  main .main-slide .swiper-control .swiper-arrow .swiper-button-prev {
+    width: 20px;
+    margin: 0 10px;
   }
   /* best-seller section */
   .best-seller .best-prod-slide .swiper-control {
