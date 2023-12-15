@@ -65,21 +65,6 @@ body {
 }
 
 /* Mixins */
-.title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.title h2 {
-  margin: 30px 0;
-}
-.title hr {
-  width: 3%;
-  border: 1px solid #000;
-}
-.title p {
-  color: #333;
-}
-
 @keyframes popup {
   0% {
     transform: translate(-50%, -40%);
@@ -207,6 +192,10 @@ body {
 .floating-menu .top-btn a {
   display: block;
   height: 100%;
+}
+
+.container {
+  overflow: hidden;
 }
 
 body {
@@ -406,6 +395,7 @@ body {
   animation: popup 1s 0.3s forwards;
 }
 
+/*swiper bem 수정 필요 */
 main .swiper-control {
   display: flex;
   justify-content: space-around;
@@ -495,39 +485,52 @@ main .swiper-control .swiper-arrow .swiper-button-prev::after {
 
 /*find section */
 .find {
-  display: none;
   padding-top: 120px;
 }
-.find .title {
+.find__title {
   text-align: center;
+}
+.find__title .title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.find__title .title h2 {
   margin: 30px 0;
 }
-.find .title h2 {
+.find__title .title hr {
+  width: 3%;
+  border: 1px solid #000;
+}
+.find__title .title p {
+  color: #333;
+}
+.find__title h2 {
   font-size: 30px;
   margin: 30px 0;
 }
-.find-link {
+.find--link {
   padding: 10px 15px;
   border-radius: 20px;
   background: #772480;
   color: #fff;
 }
-.find-slide {
+.find__slide {
   display: flex;
   width: 100%;
   overflow: hidden;
   margin-top: 100px;
 }
-.find-slide .imgs {
+.find__slide--imgs {
   display: flex;
 }
-.find-slide .imgs.origin {
+.find__slide--imgs.origin {
   animation: slide-origin 60s linear infinite;
 }
-.find-slide .imgs.clone {
+.find__slide--imgs.clone {
   animation: 60s linear 0s infinite normal none slide-clone;
 }
 
+/* find slide animation */
 @keyframes slide-origin {
   0% {
     transform: translateX(0);

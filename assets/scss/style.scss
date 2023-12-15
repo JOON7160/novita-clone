@@ -46,18 +46,20 @@ body {
     text-indent: -9999px;
 }
 /* Mixins */
+@mixin title {
 .title {
-    text-align: center;
-    margin-bottom: 50px;
-    h2 {
-        margin: 30px 0;
-    }
-    hr {
-        width: 3%;
-        border: 1px solid #000;
-    }
-    p {
-        color: #333;
+        text-align: center;
+        margin-bottom: 50px;
+        h2 {
+            margin: 30px 0;
+        }
+        hr {
+            width: 3%;
+            border: 1px solid #000;
+        }
+        p {
+            color: #333;
+        }
     }
 }
 @mixin swiper-control {
@@ -199,7 +201,7 @@ body {
     }
 }
 .container {
-    // overflow: hidden;
+    overflow: hidden;
 }
 body {
     background: #333;
@@ -408,6 +410,7 @@ body {
     }
 }
 
+/*swiper bem 수정 필요 */
 main {
     .main-slide {
     }
@@ -504,28 +507,28 @@ main {
 }
 /*find section */
 .find {
-    display: none;
+    // display: none;
     padding-top: 120px;
-    .title {
+    &__title {
+        @include title();
         text-align: center;
-        margin: 30px 0;
         h2 {
             font-size: 30px;
             margin: 30px 0;
         }
     }
-    &-link {
+    &--link {
         padding: 10px 15px;
         border-radius: 20px;
         background: $primary-color;
         color: #fff;
     }
-    &-slide {
+    &__slide {
         display: flex;
         width: 100%;
         overflow: hidden;
         margin-top: 100px;
-            .imgs {
+            &--imgs {
                 display: flex;
                 &.origin {
                     animation: slide-origin 60s linear infinite;
@@ -536,6 +539,7 @@ main {
             }
     }
 }
+/* find slide animation */
 @keyframes slide-origin {
     0% {
         transform: translateX(0);
