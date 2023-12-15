@@ -544,14 +544,14 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   overflow: hidden;
 }
 .best-seller .best-prod-slide .swiper-control {
-  z-index: 100;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 200px;
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 200px;
+  z-index: 100;
 }
 .best-seller .best-prod-slide .swiper-control .pagination-control {
   position: relative;
@@ -639,8 +639,15 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide-active .desc .inner {
   animation: popup 0.7s linear;
 }
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .swier-slide-link {
+  display: block;
+  width: 100%;
+}
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .img {
   width: 100%;
+}
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .img img:nth-of-type(2) {
+  display: none;
 }
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .inner {
   display: flex;
@@ -679,11 +686,11 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   word-break: keep-all;
 }
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util {
+  display: flex;
   position: relative;
   margin-top: 30px;
   justify-content: center;
-  display: flex;
-  z-index: 1;
+  z-index: 100;
 }
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input {
   opacity: 0;
@@ -775,7 +782,7 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.0392156863);
+  background: rgba(25, 24, 24, 0.0392156863);
   z-index: 1;
 }
 .event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-desc {
@@ -807,7 +814,8 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   position: absolute;
   right: 2%;
   bottom: 3%;
-  z-index: 1;
+  z-index: 1000;
+  border: 1px solid #000;
 }
 .event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input {
   opacity: 0;

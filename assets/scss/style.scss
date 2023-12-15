@@ -576,14 +576,14 @@ main {
         height: 100%;
         overflow: hidden;
         .swiper-control {
-            z-index: 100;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            width: 200px;
             position: absolute;
             bottom: 0;
             left: 0;
+            width: 200px;
+            z-index: 100;
             .pagination-control {
                 position: relative;
                 .swiper-pagination {
@@ -597,7 +597,8 @@ main {
                 top: 45%;
                 left: 15%;
                 width: 70px;
-                height: 3px;background-color: #0000008e;
+                height: 3px;
+                background-color: #0000008e;
                 svg {
                     --prodProgress: 0;
                     position: absolute;
@@ -677,8 +678,17 @@ main {
                         }
                     }
                 }
+                .swier-slide-link {
+                    display: block;
+                    width: 100%;
+                }
                 .img {
                     width: 100%;
+                    img {
+                        &:nth-of-type(2) {
+                            display: none;
+                        }
+                    }
                 }
                 .desc {
                     .inner {
@@ -718,14 +728,11 @@ main {
                         }
                     }
                     .prod-util {
+                        display: flex;
                         position: relative;
                         margin-top: 30px;
                         justify-content: center;
-                        display: flex;
-                        // position: absolute;
-                        // right: 2%;
-                        // bottom: 3%;
-                        z-index: 1;
+                        z-index: 100;
                         input {
                             opacity: 0;
                         }
@@ -823,7 +830,7 @@ main {
                             height: 100%;
                             top: 0;
                             left: 0;
-                            background: #0000000a;
+                            background: #1918180a;
                             z-index: 1;
                             
                         }
@@ -859,7 +866,8 @@ main {
                         position: absolute;
                         right: 2%;
                         bottom: 3%;
-                        z-index: 1;
+                        z-index: 1000;
+                        border: 1px solid #000;
                         input {
                             opacity: 0;
                         }

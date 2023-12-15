@@ -8,7 +8,7 @@ $primary-color : #772480;
     .inner {
         width: 100%;
     }
-    header,main,.find,.best-seller,.event-notice,
+    header,main,.find,.event-product,.event-notice,
     .review,.service,.info,footer {
         display: none;
     }
@@ -19,7 +19,73 @@ $primary-color : #772480;
     .container {
         overflow: visible;
     }
-    /**/
+    /* best-seller section */
+    .best-seller {
+        .best-prod-slide {
+            .swiper-control {
+                bottom: 10%;
+                .swiper-arrow {
+    
+                }
+            }
+            .swiper-wrapper {
+                width: 100%;
+                padding-bottom: 70px;
+                .swiper-slide {
+                    width: 100%;
+                    &-active {
+                        .desc {
+                        }
+                    }
+                    .img {
+                        img {
+                            height: 50%;
+                            &:nth-of-type(1) {
+                                display: none;
+                            }
+                            &:nth-of-type(2) {
+                                display: block;
+                            }
+                        }
+                    }
+                    .desc {
+                        .inner {
+                            width: 100%;
+                            height: 100%;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            border: 1px solid #fff;
+                        }
+                        .prod-info {
+                            width: 100%;
+                            text-align: center;
+                            strong {
+                                font-size: 40px;
+                            }
+                            hr {
+                                display: none;
+                            }
+                        }
+                        .prod-review {
+                            .price {
+                                font-size: 20px;
+                                font-weight: 500;
+                                color: $primary-color;
+                            }
+                        }
+                        .prod-util {
+                            position: absolute;
+                            right: 5%;
+                            bottom: 5%;
+                        }
+                    }
+                }
+            }
+    
+        }
+
+    }
     /*event-product section */
     .event-product {
         padding-top: 50px;
