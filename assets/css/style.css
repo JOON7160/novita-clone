@@ -65,16 +65,6 @@ body {
 }
 
 /* Mixins */
-@keyframes popup {
-  0% {
-    transform: translate(-50%, -40%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(-50%, -50%);
-    opacity: 1;
-  }
-}
 /* floating-menu */
 .floating-menu {
   position: fixed;
@@ -376,18 +366,22 @@ body {
 }
 .main__swiper--slide--bg {
   width: 100%;
+  height: 100%;
+  position: relative;
 }
-.main__swiper--slide--desc {
+.main__swiper--slide--bg video {
+  width: 100%;
+  height: 100%;
+}
+.main__swiper--slide--bg .desc {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-  transition: 0.5s;
-  opacity: 0;
 }
-.main__swiper--slide--desc h2 {
+.main__swiper--slide--bg .desc h2 {
   font-size: 80px;
   font-weight: 500;
 }
@@ -658,16 +652,19 @@ main .swiper-control .swiper-arrow .swiper-button-prev::after {
 .best-prod__swiper--wrapper {
   display: flex;
 }
-.best-prod__swiper--slide {
+.best-prod__swiper--wrapper .swiper-slide {
   position: relative;
 }
-.best-prod__swiper--slide.swiper-slide-active .desc .inner {
-  animation: popup 0.7s linear;
-}
-.best-prod__swiper--slide .best-prod--img {
+.best-prod__swiper--wrapper .swiper-slide .img {
   width: 100%;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--inner {
+.best-prod__swiper--wrapper .swiper-slide .desc .inner {
+  animation: popup 0.7s linear;
+}
+.best-prod__swiper--wrapper .best-prod--img {
+  width: 100%;
+}
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--inner {
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -675,45 +672,45 @@ main .swiper-control .swiper-arrow .swiper-button-prev::after {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--info {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--info {
   width: 320px;
   text-align: left;
   word-break: keep-all;
   color: #fff;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--info strong {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--info strong {
   font-size: 56px;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--info b {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--info b {
   display: block;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--info hr {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--info hr {
   display: inline-block;
   border: 1px solid #fff;
   width: 10%;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--info p {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--info p {
   padding: 0 30px 0 0;
   word-break: kepp-all;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--review {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--review {
   width: 350px;
   color: #fff;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--review .review {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--review .review {
   word-break: keep-all;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--util {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util {
   display: flex;
   position: relative;
   margin-top: 30px;
   justify-content: center;
   z-index: 1;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--util input {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util input {
   opacity: 0;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--util label {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util label {
   position: relative;
   width: 50px;
   height: 50px;
@@ -721,33 +718,33 @@ main .swiper-control .swiper-arrow .swiper-button-prev::after {
   background: #fff;
   cursor: pointer;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--util label::after {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util label::after {
   position: absolute;
   content: "";
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--util label[for=like]::after, .best-prod__swiper--slide .best-prod--desc .best-prod--util label[for=like2]::after {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util label[for=like]::after, .best-prod__swiper--wrapper .best-prod--desc .best-prod--util label[for=like2]::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -650px -200px;
   width: 24px;
   height: 21px;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--util label[for=cart]::after, .best-prod__swiper--slide .best-prod--desc .best-prod--util label[for=cart2]::after {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util label[for=cart]::after, .best-prod__swiper--wrapper .best-prod--desc .best-prod--util label[for=cart2]::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -735px -198px;
   width: 22px;
   height: 23px;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--util input[id=like]:checked ~ label[for=like]::after,
-.best-prod__swiper--slide .best-prod--desc .best-prod--util input[id=like2]:checked ~ label[for=like2]::after {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util input[id=like]:checked ~ label[for=like]::after,
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util input[id=like2]:checked ~ label[for=like2]::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -28px -636px;
   width: 24px;
   height: 21px;
 }
-.best-prod__swiper--slide .best-prod--desc .best-prod--util input[id=like]:focus ~ label[for=like],
-.best-prod__swiper--slide .best-prod--desc .best-prod--util input[id=cart]:focus ~ label[for=cart],
-.best-prod__swiper--slide .best-prod--desc .best-prod--util input[id=like2]:focus ~ label[for=like2],
-.best-prod__swiper--slide .best-prod--desc .best-prod--util input[id=cart2]:focus ~ label[for=cart2] {
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util input[id=like]:focus ~ label[for=like],
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util input[id=cart]:focus ~ label[for=cart],
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util input[id=like2]:focus ~ label[for=like2],
+.best-prod__swiper--wrapper .best-prod--desc .best-prod--util input[id=cart2]:focus ~ label[for=cart2] {
   outline: 2px solid #772480;
 }
 
