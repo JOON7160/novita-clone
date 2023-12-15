@@ -1188,8 +1188,11 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   position: relative;
   color: #fff;
 }
-.info-innovation video {
+.info-innovation .innovation_pc {
   width: 100%;
+}
+.info-innovation .innovation_mo {
+  display: none;
 }
 .info-innovation .cont {
   text-align: center;
@@ -1203,7 +1206,7 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
 }
 .info-innovation .cont p {
   font-size: 18px;
-  font-size: 500;
+  font-weight: 500;
 }
 .info-innovation .cont .inno-link {
   display: inline-block;
@@ -1223,26 +1226,26 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   flex: 1;
   padding: 10px 60px;
 }
-.info-link .links li a {
+.info-link .links li .links-link {
   display: block;
   width: 100%;
   text-align: center;
   color: #333;
 }
-.info-link .links li a::before {
+.info-link .links li .links-link::before {
   content: "";
   display: block;
   margin: 10px auto;
   width: 64px;
   height: 53px;
 }
-.info-link .links li a b {
+.info-link .links li .links-link .links-desc b {
   display: block;
   font-weight: bold;
   font-size: 22px;
   margin: 10px 0;
 }
-.info-link .links li a span {
+.info-link .links li .links-link .links-desc span {
   word-break: keep-all;
 }
 .info-link .links li:nth-of-type(1) a::before {

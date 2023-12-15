@@ -4,7 +4,7 @@
         width: 100%;
     }
     header,main,.find,.best-seller,.event-product,
-    .event-notice,.review,.service,.info {
+    .event-notice,.review,.info,footer {
         display: none;
     }
     /*floating-menu*/
@@ -13,6 +13,61 @@
     }
     .container {
         overflow: visible;
+    }
+    /* service section */
+    .service {
+        &-cont {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+    /* info section */
+    .info {
+        padding-top: 100px;
+        &-innovation {
+            width: 100%;
+            .innovation_pc {
+                display: none;
+            }
+            .innovation_mo {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+            .cont {
+                h3 {
+                    font-size: 40px;
+                    text-wrap: nowrap;
+                }
+                p {
+                    text-wrap: nowrap;
+                }
+            }
+        }
+        &-link {
+            margin-top: 50px;
+            .links {
+                flex-direction: column;
+                li {
+                    display: flex;
+                    margin-bottom: 15px;
+                    .links-link {
+                        display: flex;
+                        &::before {
+                            margin-top: 30px;
+                        }
+                        .links-desc {
+                            flex: 1;
+                            margin-left: 20px;
+                            text-align: left;
+                            span {
+                                color: #222;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     /*footer */
     footer {
@@ -52,4 +107,5 @@
         }
 
     }
+
 }

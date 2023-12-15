@@ -3,7 +3,7 @@
     width: 100%;
   }
   header, main, .find, .best-seller, .event-product,
-  .event-notice, .review, .service, .info {
+  .event-notice, .review, .info, footer {
     display: none;
   }
   /*floating-menu*/
@@ -12,6 +12,57 @@
   }
   .container {
     overflow: visible;
+  }
+  /* service section */
+  .service-cont {
+    flex-direction: column;
+    gap: 30px;
+  }
+  /* info section */
+  .info {
+    padding-top: 100px;
+  }
+  .info-innovation {
+    width: 100%;
+  }
+  .info-innovation .innovation_pc {
+    display: none;
+  }
+  .info-innovation .innovation_mo {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  .info-innovation .cont h3 {
+    font-size: 40px;
+    text-wrap: nowrap;
+  }
+  .info-innovation .cont p {
+    text-wrap: nowrap;
+  }
+  .info-link {
+    margin-top: 50px;
+  }
+  .info-link .links {
+    flex-direction: column;
+  }
+  .info-link .links li {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .info-link .links li .links-link {
+    display: flex;
+  }
+  .info-link .links li .links-link::before {
+    margin-top: 30px;
+  }
+  .info-link .links li .links-link .links-desc {
+    flex: 1;
+    margin-left: 20px;
+    text-align: left;
+  }
+  .info-link .links li .links-link .links-desc span {
+    color: #222;
   }
   /*footer */
   footer {
