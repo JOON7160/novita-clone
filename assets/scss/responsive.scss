@@ -4,7 +4,7 @@
         width: 100%;
     }
     header,main,.find,.best-seller,.event-product,
-    .event-notice,.service,.info,footer {
+    .review,.service,.info,footer {
         display: none;
     }
     /*floating-menu*/
@@ -13,6 +13,75 @@
     }
     .container {
         overflow: visible;
+    }
+    /*event-notice section */
+    .event {
+        &-notice {
+            padding-top: 50px;
+            .title {
+                text-align: center;
+                hr {
+                    display: none;
+                }
+                p {
+                    padding: 30px;
+                    word-break: keep-all;
+                }
+            }
+            .event-bg {
+                display: none;
+            }
+        }
+        &-slide {
+            overflow: visible;
+            .swiper-control {
+                .swiper-button {
+                    &-next,
+                    &-prev {
+                        display: none;
+                    }
+                }
+            }
+            .event-prod-pagination {
+                bottom: -10%;
+                left: 0;
+            }
+        }
+        &-cont {
+            display: flex;
+            flex-direction: column;
+            .caption {
+                display: none;
+            }
+            .cont-L {
+                width: 100%;
+                padding: 0;
+            }
+            .cont-s {
+                width: 100%;
+                .item-wrap {
+                    width: 100%;
+                    
+                }
+                .event-desc {
+                    width: 100%;
+                    .img {
+                        width: 100%;
+                        img {
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .event-info {
+                        text-align: center;
+                        margin-top: 20px;
+                    }
+                }
+            }
+            &-promo {
+                width: 100%;
+            }
+        }
     }
     /* review section */
     .review {

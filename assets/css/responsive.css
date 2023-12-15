@@ -3,7 +3,7 @@
     width: 100%;
   }
   header, main, .find, .best-seller, .event-product,
-  .event-notice, .service, .info, footer {
+  .review, .service, .info, footer {
     display: none;
   }
   /*floating-menu*/
@@ -12,6 +12,67 @@
   }
   .container {
     overflow: visible;
+  }
+  /*event-notice section */
+  .event-notice {
+    padding-top: 50px;
+  }
+  .event-notice .title {
+    text-align: center;
+  }
+  .event-notice .title hr {
+    display: none;
+  }
+  .event-notice .title p {
+    padding: 30px;
+    word-break: keep-all;
+  }
+  .event-notice .event-bg {
+    display: none;
+  }
+  .event-slide {
+    overflow: visible;
+  }
+  .event-slide .swiper-control .swiper-button-next, .event-slide .swiper-control .swiper-button-prev {
+    display: none;
+  }
+  .event-slide .event-prod-pagination {
+    bottom: -10%;
+    left: 0;
+  }
+  .event-cont {
+    display: flex;
+    flex-direction: column;
+  }
+  .event-cont .caption {
+    display: none;
+  }
+  .event-cont .cont-L {
+    width: 100%;
+    padding: 0;
+  }
+  .event-cont .cont-s {
+    width: 100%;
+  }
+  .event-cont .cont-s .item-wrap {
+    width: 100%;
+  }
+  .event-cont .cont-s .event-desc {
+    width: 100%;
+  }
+  .event-cont .cont-s .event-desc .img {
+    width: 100%;
+  }
+  .event-cont .cont-s .event-desc .img img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .event-cont .cont-s .event-desc .event-info {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .event-cont-promo {
+    width: 100%;
   }
   /* review section */
   .review .swiper.review-slide {
