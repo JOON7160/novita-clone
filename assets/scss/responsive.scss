@@ -4,7 +4,7 @@
         width: 100%;
     }
     header,main,.find,.best-seller,.event-product,
-    .event-notice,.review,.info,footer {
+    .event-notice,.service,.info,footer {
         display: none;
     }
     /*floating-menu*/
@@ -14,6 +14,99 @@
     .container {
         overflow: visible;
     }
+    /* review section */
+    .review {
+        .swiper.review-slide {
+            background: url(../imgs/bg-review.png)no-repeat top center;
+            overflow: hidden;
+            .swiper-control {
+                display: block;
+            }
+            .swiper-wrapper {
+                display: flex;
+                gap: 0;
+                width: 300%;
+                height: 100%;
+                transition-property: transform;
+                overflow: hidden;
+                .swiper-slide {
+                    padding:100px 20px 0 20px ;
+                    width: 100%;
+                    height: auto;
+                    margin-right: 0;
+                    &-active {
+                        .review-img {
+                            transform: translateY(-5%);
+                        }
+                    }
+                    .review-img {
+                        width: 100%;
+                        height: auto;
+                        transition: 0.8s;
+                        img {
+                            width: 100%;
+                        }
+                        &:hover {
+                            transform: translateY(-10%);
+                        }
+                    }
+                    .review-txt {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        white-space: wrap;
+                        word-break: kepp-all;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        font-size: 18px;
+                        padding: 0 50px;
+                        margin: 0;
+                        margin-bottom: 20px;
+                        font-weight: 300;
+                    }
+                    .review-link {
+                        a {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            padding-top: 20px;
+                            border-top: 1px dashed #00000053;
+                            color: #333;
+                            img {
+                                border-radius: 5px;
+                                width: 56px;
+                                height: 56px;
+                            }
+                            .desc {
+                                text-align: center;
+                                strong {
+                                    display: block;
+                                }
+                            }
+                            .go-to-detail {
+                                position: relative;
+                                width: 45px;
+                                height: 45px;
+                                border-radius: 50%;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    background: url(../imgs/ico-sprites.svg) no-repeat -20px -151px;
+                                    width: 13px;
+                                    height: 10px;
+                                }
+                            }
+                        }
+                    }
+    
+                }
+            }
+        }
+    }
+
     /* service section */
     .service {
         .title {
