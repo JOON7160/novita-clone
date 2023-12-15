@@ -73,7 +73,9 @@ $(function(){
     //bestSeller swiper
     const progressBar = $('.autoplay-progress svg')
     var toggleBtn =$('.best-toggle-btn')
-    var bestSellerSwiper = new Swiper(".best-prod-slide", {
+    var bestSellerSwiper = new Swiper(".best-prod__swiper.swiper", {
+    wrapperClass: 'best-prod__swiper--wrapper',
+    slideClass: 'best-prod__swiper--slide', 
     spaceBetween: 30,
     centeredSlides: true,
     autoplay: {
