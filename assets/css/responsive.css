@@ -10,5 +10,40 @@
   .floating-menu {
     display: none;
   }
+  .container {
+    overflow: visible;
+  }
   /*footer */
+  footer {
+    background: #333;
+  }
+  footer .inner {
+    padding: 20px 10px;
+  }
+  footer .f-logo {
+    margin: 40px 0;
+  }
+  footer .f-cont {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+  footer .f-cont .f-info .links {
+    font-size: 13px;
+    text-wrap: nowrap;
+  }
+  footer .f-cont .address-info {
+    font-size: 12px;
+    line-height: 2em;
+    word-break: kepp-all;
+    padding-right: 10px;
+  }
+  footer .f-cont .f-company .company-info {
+    padding-bottom: 40px;
+    border-bottom: 1px solid #333;
+  }
+  footer .f-cont .f-company .call {
+    flex-direction: column;
+    padding: 30px 0;
+    border-bottom: 1px solid #333;
+  }
 }

@@ -11,8 +11,45 @@
     .floating-menu {
         display: none;
     }
+    .container {
+        overflow: visible;
+    }
     /*footer */
     footer {
-        
+        background: #333;
+        .inner {
+            padding: 20px 10px;
+        }
+        .f-logo {
+            margin: 40px 0;
+        }
+        .f-cont {
+            flex-direction: column-reverse;
+            gap: 20px;
+            .f-info {
+                .links {
+                    font-size: 13px;
+                    text-wrap: nowrap;
+                }
+            }
+            .address-info {
+                font-size: 12px;
+                line-height: 2em;
+                word-break: kepp-all;
+                padding-right: 10px;
+            }
+            .f-company {
+                .company-info {
+                    padding-bottom: 40px;
+                    border-bottom: 1px solid #333;
+                }
+                .call {
+                    flex-direction: column;
+                    padding: 30px 0;
+                    border-bottom: 1px solid #333;
+                }
+            }
+        }
+
     }
 }
