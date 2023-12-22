@@ -49,7 +49,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(202, 32, 32, 0.4784313725);
+    background: rgba(16, 16, 16, 0.2);
     z-index: -1;
   }
   header .lnb-cont {
@@ -58,12 +58,12 @@
     left: 0;
     width: 300px;
     height: 100vh;
+    padding-right: 10px;
     overflow-y: auto;
-    background: #c2c2c2;
+    background: #fff;
   }
   header .lnb-cont .cont-util {
     padding: 10px 15px;
-    border: 1px solid #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,6 +72,7 @@
     margin-right: 10px;
   }
   header .lnb-cont .cont-util .util-link a {
+    font-size: 15px;
     color: #000;
   }
   header .lnb-cont .cont-util .util-btns {
@@ -99,7 +100,6 @@
   }
   header .lnb-cont .cont-items {
     padding: 10px 15px;
-    border: 1px solid #000;
   }
   header .lnb-cont .cont-items .quick {
     padding: 40px 0 20px 0;
@@ -157,6 +157,7 @@
     background: url(../imgs/ico-sprites-line.svg) no-repeat -148px -276px;
     width: 13px;
     height: 13px;
+    transform: scale(1.2);
   }
   header .lnb-cont .cont-items .sub-nav .nav-item .item-title .title-link {
     display: block;
@@ -188,6 +189,53 @@
   }
   header .lnb-cont .cont-items .sub-nav .nav-item .depth2 {
     padding: 5px 10px;
+  }
+  header .lnb-cont .cont-items .mo-find-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  header .lnb-cont .cont-items .mo-find-link a {
+    display: block;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 500;
+    color: #772480;
+  }
+  header .lnb-cont .cont-items .mo-find-link::after {
+    content: "";
+    display: block;
+    background: url("../imgs/ico-sprites-line.svg") no-repeat -346px -277px;
+    width: 13px;
+    height: 10px;
+    transform: scale(1.5);
+  }
+  header .lnb-cont .cont-items .call {
+    padding: 20px 0;
+  }
+  header .lnb-cont .cont-items .call li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  header .lnb-cont .cont-items .call li span {
+    font-size: 15px;
+  }
+  header .lnb-cont .cont-items .call li .calling {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #d2d2d2;
+  }
+  header .lnb-cont .cont-items .call li .calling button {
+    background: url("../imgs/ico-sprites.svg") no-repeat -189px -536px;
+    width: 18px;
+    height: 18px;
+    transform: scale(0.8);
   }
   header .util {
     display: none;
