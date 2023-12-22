@@ -102,6 +102,7 @@ body {
                 transform: translate(-50%,-50%) rotate(-45deg);
             }
         }
+        /*checked > label active */
         input[id=chat]:checked ~ label[for=chat]::before {
             transform: translate(-50%,-50%) rotate(-45deg);
             opacity: 1;
@@ -171,7 +172,7 @@ body {
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        background: url(../imgs/img-sprites.png)no-repeat -480px -40px;;
+        background: url(../imgs/img-sprites.png)no-repeat -480px -40px;
         cursor: pointer;
         a {
             display: block;

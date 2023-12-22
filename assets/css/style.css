@@ -86,6 +86,7 @@ body {
   height: 70px;
   border-radius: 50%;
   background: #772480;
+  /*checked > label active */
 }
 .floating-menu .chat-menu input[id=chat] {
   opacity: 0;

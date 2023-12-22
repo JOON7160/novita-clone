@@ -6,8 +6,9 @@
     width: 100%;
   }
   /*floating-menu*/
-  .floating-menu {
-    display: none;
+  .floating-menu .chat-menu,
+  .floating-menu .top-btn {
+    transform: scale(0.7);
   }
   .container {
     overflow: hidden;

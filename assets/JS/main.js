@@ -19,10 +19,12 @@ $(function(){
     })
     // mo LNB
     $('.mo-util .trigger').click(function(){
+        $('body').addClass('lnb-open')
         $('.lnb').fadeIn()
         $('.lnb-cont').css('left','0')
     })
     $('.util-btns .close-btn').click(function(){
+        $('body').removeClass('lnb-open')
         $('.lnb').hide();
     })
     //LNB nav 

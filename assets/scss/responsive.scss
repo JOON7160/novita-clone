@@ -17,7 +17,10 @@ $primary-color : #772480;
     // }
     /*floating-menu*/
     .floating-menu {
-        display: none;
+        .chat-menu,
+        .top-btn {
+            transform: scale(0.7);
+        }
     }
     .container {
         overflow: hidden;
