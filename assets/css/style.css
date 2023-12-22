@@ -208,6 +208,11 @@ header {
   z-index: 1000;
   background: rgba(0, 0, 0, 0.2784313725);
 }
+header .mo-util,
+header input[id=trigger],
+header .lnb {
+  display: none;
+}
 header.active {
   background: #fff;
   width: 100%;

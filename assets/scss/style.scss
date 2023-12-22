@@ -193,6 +193,9 @@ header {
     transition: 0.3s;
     z-index: 1000;
     background: #00000047; //임시 bg
+    .mo-util,
+    input[id=trigger],
+    .lnb {display: none;}
     &.active {
         background: #fff;
         width: 100%;
@@ -237,6 +240,7 @@ header {
         }
         margin-right: 150px;
     }
+    
     .gnb {
         display: flex;
         margin-right: auto;
