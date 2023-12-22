@@ -17,6 +17,13 @@ $(function(){
         $('header').removeClass('active');
         $('.gnb li').children('.sub').removeClass('active');
     })
+    // mo LNB
+    $('.nav-item').click(function(){
+        $(this).siblings().removeClass('active')
+        $(this).toggleClass('active')
+        $(this).siblings().children('.depth1').stop().slideUp();
+        $(this).children('.depth1').stop().slideToggle();
+    })
     //mainSlide swiper
     const progressLine = $('.autoplay-progress svg')
     var mainToggleBtn =$('.main-toggle-btn')
