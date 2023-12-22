@@ -18,6 +18,14 @@ $(function(){
         $('.gnb li').children('.sub').removeClass('active');
     })
     // mo LNB
+    $('.mo-util .trigger').click(function(){
+        $('.lnb').fadeIn()
+        $('.lnb-cont').css('left','0')
+    })
+    $('.util-btns .close-btn').click(function(){
+        $('.lnb').hide();
+    })
+    //LNB nav 
     $('.nav-item').click(function(){
         $(this).siblings().removeClass('active')
         $(this).toggleClass('active')
