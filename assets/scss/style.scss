@@ -143,7 +143,6 @@ body {
                     top: 32%;
                     left: 4%;
                     background: url(../imgs/ico-sprites.svg)no-repeat -189px -536px;
-
                 }
             }
             .writing {
@@ -206,7 +205,6 @@ header {
     height: 100px;
     transition: 0.3s;
     z-index: 1000;
-    // background: #00000047; //임시 bg
     &.active {
         background: #fff;
         width: 100%;
@@ -403,8 +401,12 @@ main {
                     }
                 }
                 video {
-                    // width: 100%;
-                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    width: 100vw;
+                    height: 100vh;
                 }
                 .desc {
                     position: absolute;
