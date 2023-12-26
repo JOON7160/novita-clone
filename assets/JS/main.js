@@ -19,12 +19,10 @@ $(function(){
     })
     // mo LNB
     $('.mo-util .trigger').click(function(){
-        $('body').addClass('lnb-open')
         $('.lnb').fadeIn()
         $('.lnb-cont').css('left','0')
     })
-    $('.util-btns .close-btn').click(function(){
-        $('body').removeClass('lnb-open')
+    $('.util-btns .close-btn,.lnb-bg').click(function(){
         $('.lnb').hide();
     })
     //LNB nav 
@@ -86,16 +84,17 @@ $(function(){
         }
     });
     //bestSeller swiper
-    const progressBar = $('.autoplay-progress svg')
+    const progressBar = $('.best-autoplay-progress svg')
     var toggleBtn =$('.best-toggle-btn')
     var bestSellerSwiper = new Swiper(".best-prod-slide", {
-    spaceBetween: 30,
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 0,
     centeredSlides: true,
     autoplay: {
         delay: 5000,
         disableOnInteraction: false,
     },
-    loop: true,
     pagination: {
         el: ".swiper-pagination",
         type: "fraction",
@@ -113,7 +112,7 @@ $(function(){
         autoplayTimeLeft(s, time, prodProgress) {
             progressBar.css("--prodProgress", 1 - prodProgress)
         }
-    }
+    },
 });
     toggleBtn.on ('click keydown',function(e){
         // Spacebar의 기본 동작 막기
@@ -252,10 +251,6 @@ $(function(){
             slidesPerView: 1,
             spaceBetween: 0,
             },
-            // 768: {
-            // slidesPerView: 4,
-            // spaceBetween: 40,
-            // },
             1024: {
             slidesPerView: 3,
             spaceBetween: 0,
