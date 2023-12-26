@@ -713,6 +713,9 @@ $primary-color : #772480;
         padding-top: 100px;
         &-innovation {
             width: 100%;
+            .inno-link {
+                word-break: keep-all;
+            }
             .innovation_pc {
                 display: none;
             }

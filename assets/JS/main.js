@@ -1,4 +1,6 @@
 $(function(){
+    //background video 자동재생 관리
+    $('.main-bg-video','.innovation_mo').play();
     //top-btn
     $(window).scroll(function(){
         if($(window).scrollTop() > 100) {
