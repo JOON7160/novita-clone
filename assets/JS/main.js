@@ -7,6 +7,18 @@ $(function(){
             $('.top-btn').fadeOut()
         }
     })
+    //mo-header active
+    var windowWidth = window.innerWidth
+    if(windowWidth <= 1260) {
+        $(window).scroll(function(){
+            if($(window).scrollTop()>50) {
+                $('header').addClass('active')
+            } else {
+                $('header').removeClass('active')
+            }
+        })
+
+    }
     // GNB 
     $('.gnb > li > a').on('mouseenter focus',function(){
         $('header').addClass('active');

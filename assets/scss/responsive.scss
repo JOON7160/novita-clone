@@ -13,15 +13,30 @@ $primary-color : #772480;
     }
     /*floating-menu*/
     .floating-menu {
-        display: none;
+        .chat-menu,
+        .top-btn {
+            transform: scale(0.9);
+        }
     }
     .container {
         overflow: hidden;
     }
     /* header */
     header {
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
+        &.active {
+            background: #fff;
+            .mo-util {
+                margin-right: 10px;
+                .cart,.trigger {
+                    filter: invert(100%);
+                    transform: scale(1.2);
+                }
+            }
+        }
         .header-inner {
             padding: 0 10px;
             max-width: 1260px;

@@ -6,16 +6,29 @@
     width: 100%;
   }
   /*floating-menu*/
-  .floating-menu {
-    display: none;
+  .floating-menu .chat-menu,
+  .floating-menu .top-btn {
+    transform: scale(0.9);
   }
   .container {
     overflow: hidden;
   }
   /* header */
   header {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+  }
+  header.active {
+    background: #fff;
+  }
+  header.active .mo-util {
+    margin-right: 10px;
+  }
+  header.active .mo-util .cart, header.active .mo-util .trigger {
+    filter: invert(100%);
+    transform: scale(1.2);
   }
   header .header-inner {
     padding: 0 10px;
