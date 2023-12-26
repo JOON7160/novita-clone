@@ -9,7 +9,7 @@ $(function(){
     })
     //mo-header active
     var windowWidth = window.innerWidth
-    if(windowWidth <= 1260) {
+    if(windowWidth < 1260) {
         $(window).scroll(function(){
             if($(window).scrollTop()>50) {
                 $('header').addClass('active')
@@ -17,7 +17,6 @@ $(function(){
                 $('header').removeClass('active')
             }
         })
-
     }
     // GNB 
     $('.gnb > li > a').on('mouseenter focus',function(){
@@ -33,9 +32,11 @@ $(function(){
     $('.mo-util .trigger').click(function(){
         $('.lnb').fadeIn()
         $('.lnb-cont').css('left','0')
+        $('body').addClass('lnb-open')
     })
     $('.util-btns .close-btn,.lnb-bg').click(function(){
         $('.lnb').hide();
+        $('body').removeClass('lnb-open')
     })
     //LNB nav 
     $('.nav-item').click(function(){
@@ -213,20 +214,6 @@ $(function(){
             '<span class="' + totalClass + '"></span>' //총 페이지
             },
         },
-        breakpoints: {
-            640: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            },
-            // 768: {
-            // slidesPerView: 4,
-            // spaceBetween: 40,
-            // },
-            1024: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            },
-        },
     });
     var notiPagingSwiper = new Swiper(".event-slide", {
         pagination: {
@@ -238,10 +225,7 @@ $(function(){
             slidesPerView: 1,
             spaceBetween: 0,
             },
-            // 768: {
-            // slidesPerView: 4,
-            // spaceBetween: 40,
-            // },
+
             1024: {
             slidesPerView: 1,
             spaceBetween: 0,
