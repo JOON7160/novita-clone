@@ -303,14 +303,17 @@
     bottom: 10%;
   }
   .best-seller .best-prod-slide .swiper-wrapper {
-    width: 100%;
+    width: 400%;
     padding-bottom: 70px;
   }
   .best-seller .best-prod-slide .swiper-wrapper .swiper-slide {
     width: 100%;
   }
+  .best-seller .best-prod-slide .swiper-wrapper .swiper-slide-active .img img {
+    width: 100%;
+  }
   .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .img img {
-    height: 50%;
+    width: 100%;
   }
   .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .img img:nth-of-type(1) {
     display: none;

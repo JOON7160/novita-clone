@@ -28,6 +28,10 @@ html {
   scroll-behavior: smooth;
 }
 
+h2 {
+  font-size: 35px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -63,6 +67,7 @@ body {
   text-indent: -9999px;
 }
 
+/* mixins */
 @keyframes popup {
   0% {
     transform: translate(-50%, -40%);
@@ -205,7 +210,6 @@ header {
   height: 100px;
   transition: 0.3s;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.2784313725);
 }
 header.active {
   background: #fff;
@@ -314,7 +318,7 @@ header .gnb > li .sub.active {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.062745098);
 }
 header .gnb .prod1 .depth {
-  left: 366px;
+  margin-left: 366px;
 }
 header .gnb .prod2 .depth {
   margin-left: 500px;
@@ -350,6 +354,11 @@ header .util li a .badge {
   border-radius: 50%;
   padding: 1px 5px;
 }
+header .mo-util,
+header .lnb,
+header input[id=trigger] {
+  display: none;
+}
 
 /* main */
 main .main-slide {
@@ -371,7 +380,7 @@ main .main-slide .swiper-wrapper .swiper-slide-active .desc {
   animation: popup 0.7s linear;
 }
 main .main-slide .swiper-wrapper .swiper-slide video {
-  width: 100%;
+  height: 100%;
 }
 main .main-slide .swiper-wrapper .swiper-slide .desc {
   position: absolute;
@@ -562,7 +571,7 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   justify-content: space-between;
   width: 100px;
 }
-.best-seller .best-prod-slide .swiper-control .autoplay-progress {
+.best-seller .best-prod-slide .swiper-control .best-autoplay-progress {
   position: absolute;
   top: 45%;
   left: 15%;
@@ -570,7 +579,7 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   height: 3px;
   background-color: rgba(0, 0, 0, 0.5568627451);
 }
-.best-seller .best-prod-slide .swiper-control .autoplay-progress svg {
+.best-seller .best-prod-slide .swiper-control .best-autoplay-progress svg {
   --prodProgress: 0;
   position: absolute;
   top: 0;
@@ -580,7 +589,7 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   stroke-width: 10px;
   stroke: #fff;
   fill: none;
-  stroke-dashoffset: calc(100 * (1 - var(--progress)));
+  stroke-dashoffset: calc(100 * (1 - var(--prodProgress)));
   stroke-dasharray: 100;
 }
 .best-seller .best-prod-slide .swiper-control .swiper-pagination {
@@ -816,7 +825,6 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   right: 2%;
   bottom: 3%;
   z-index: 1000;
-  border: 1px solid #000;
 }
 .event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input {
   opacity: 0;
@@ -874,6 +882,18 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   z-index: -1;
   transition: 1s;
   transform: translateX(100%);
+}
+.event-notice .title {
+  text-align: center;
+}
+.event-notice .title h2 {
+  margin-bottom: 30px;
+}
+.event-notice .title hr {
+  width: 10%;
+}
+.event-notice .title p {
+  margin: 30px 0 50px 0;
 }
 .event-slide {
   position: relative;
@@ -1047,13 +1067,13 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   height: 10px;
 }
 .review .swiper.review-slide .swiper-control .swiper-button-next {
-  right: 0;
+  right: 1%;
 }
 .review .swiper.review-slide .swiper-control .swiper-button-next::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -23px -211px;
 }
 .review .swiper.review-slide .swiper-control .swiper-button-prev {
-  left: 0;
+  left: 1%;
 }
 .review .swiper.review-slide .swiper-control .swiper-button-prev::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -195px -211px;
@@ -1137,8 +1157,17 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
 .service {
   padding-top: 120px;
 }
-.service h2 {
-  font-size: 40px;
+.service .title {
+  text-align: center;
+}
+.service .title h2 {
+  margin-bottom: 30px;
+}
+.service .title hr {
+  width: 10%;
+}
+.service .title p {
+  margin: 30px 0 50px 0;
 }
 .service-cont {
   display: flex;

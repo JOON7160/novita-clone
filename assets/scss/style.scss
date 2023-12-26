@@ -15,6 +15,7 @@ button {border: none;cursor: pointer;}
 
 /* common css */
 html {scroll-behavior: smooth;}
+h2{font-size: 35px;}
 body {
     margin: 0;
     padding: 0;
@@ -46,6 +47,19 @@ body {
     text-indent: -9999px;
 }
 
+/* mixins */
+@mixin title {
+        text-align: center;
+        h2 {
+            margin-bottom: 30px;
+        }
+        hr {
+            width: 10%;
+        }
+        p {
+            margin: 30px 0 50px 0;
+        }
+}
 @keyframes popup {
     0% {
         transform: translate(-50%,-40%);
@@ -191,7 +205,7 @@ header {
     height: 100px;
     transition: 0.3s;
     z-index: 1000;
-    background: #00000047; //임시 bg
+    // background: #00000047; //임시 bg
     &.active {
         background: #fff;
         width: 100%;
@@ -314,8 +328,7 @@ header {
         }
         .prod1 {
             .depth {
-                // margin-left:366px;
-                left: 366px;
+                margin-left:366px;
             }
         }
         .prod2 {
@@ -362,6 +375,11 @@ header {
             
         }
     }
+    .mo-util,
+    .lnb,
+    input[id=trigger] {
+        display: none;
+    }
 }
 /* main */
 main {
@@ -383,8 +401,8 @@ main {
                     }
                 }
                 video {
-                    width: 100%;
-                    // height: 100%;
+                    // width: 100%;
+                    height: 100%;
                 }
                 .desc {
                     position: absolute;
@@ -580,7 +598,7 @@ main {
                     width: 100px;
                 }
             }
-            .autoplay-progress {
+            .best-autoplay-progress {
                 position: absolute;
                 top: 45%;
                 left: 15%;
@@ -597,7 +615,7 @@ main {
                     stroke-width: 10px;
                     stroke: #fff;
                     fill: none;
-                    stroke-dashoffset: calc(100 * (1 - var(--progress)));
+                    stroke-dashoffset: calc(100 * (1 - var(--prodProgress)));
                     stroke-dasharray: 100;
                 }
             }
@@ -742,7 +760,7 @@ main {
                             &[for=like2]::after {
                                 background: url(../imgs/ico-sprites.svg)no-repeat -650px -200px;
                                 width: 24px;
-                                height: 21px;;
+                                height: 21px;
                             }
                             &[for=cart]::after,
                             &[for=cart2]::after {
@@ -855,7 +873,6 @@ main {
                         right: 2%;
                         bottom: 3%;
                         z-index: 1000;
-                        border: 1px solid #000;
                         input {
                             opacity: 0;
                         }
@@ -921,10 +938,9 @@ main {
             transition: 1s;
             transform: translateX(100%);
         }
-        // .event-bg[data-aos="fade-left"] {
-        //     opacity: 1;
-        //     transform: translateX(0);
-        // }
+        .title {
+            @include title();
+        }
     }
     &-slide {
         position: relative;
@@ -1087,6 +1103,7 @@ main {
             position: absolute;
             top: 30%;
             left: 0;
+            
             width: 100%;
             height: auto;
             .swiper-button{
@@ -1110,13 +1127,13 @@ main {
                     }
                 }
                 &-next {
-                    right: 0;
+                    right: 1%;
                     &::after {
                         background: url(../imgs/ico-sprites.svg)no-repeat -23px -211px;
                     }
                 }
                 &-prev {
-                    left: 0;
+                    left: 1%;
                     &::after {
                         background: url(../imgs/ico-sprites.svg)no-repeat -195px -211px;
                     }
@@ -1206,8 +1223,8 @@ main {
 /* service section */
 .service {
     padding-top: 120px;
-    h2 {
-        font-size: 40px;
+    .title {
+        @include title();
     }
     &-cont {
         display: flex;

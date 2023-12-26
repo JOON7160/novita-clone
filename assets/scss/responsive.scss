@@ -11,10 +11,6 @@ $primary-color : #772480;
     .inner {
         width: 100%;
     }
-    // main,.find,.event-product,.best-seller,.event-notice,
-    // .review,.service,.info,footer {
-    //     display: none;
-    // }
     /*floating-menu*/
     .floating-menu {
         display: none;
@@ -353,17 +349,22 @@ $primary-color : #772480;
                 }
             }
             .swiper-wrapper {
-                width: 100%;
+                width: 400%;
                 padding-bottom: 70px;
                 .swiper-slide {
                     width: 100%;
                     &-active {
+                        .img {
+                            img {
+                                width: 100%;
+                            }
+                        }
                         .desc {
                         }
                     }
                     .img {
                         img {
-                            height: 50%;
+                            width: 100%;
                             &:nth-of-type(1) {
                                 display: none;
                             }
