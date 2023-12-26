@@ -32,7 +32,7 @@ $(function(){
     $('.mo-util .trigger').click(function(){
         $('.lnb').fadeIn()
         $('.lnb-cont').css('left','0')
-        $('body').addClass('lnb-open')
+        $('body').addClass('lnb-open') // lnb 나타날시, 스크롤 방지
     })
     $('.util-btns .close-btn,.lnb-bg').click(function(){
         $('.lnb').hide();
