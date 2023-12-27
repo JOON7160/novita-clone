@@ -295,7 +295,6 @@
   /* main */
   main .main-slide .swiper-wrapper .swiper-slide video {
     object-fit: cover;
-    height: 100vh;
   }
   main .main-slide .swiper-wrapper .swiper-slide .desc h2 {
     font-size: 60px;
@@ -626,6 +625,9 @@
   }
   .info-innovation {
     width: 100%;
+  }
+  .info-innovation .inno-link span {
+    word-break: keep-all;
   }
   .info-innovation .innovation_pc {
     display: none;

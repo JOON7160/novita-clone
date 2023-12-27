@@ -84,7 +84,7 @@ body {
         border-radius: 50%;
         background: $primary-color;
         input[id=chat] {
-            opacity: 0;
+            visibility: hidden;
         }
         label[for=chat] {
             position: absolute;
@@ -101,13 +101,13 @@ body {
                 position: absolute;
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%,-50%);
-                z-index: 100;
-                opacity: 0;
-                transition: 0.5s;
                 width: 35px;
                 height: 2px;
+                z-index: 100;
+                transform: translate(-50%,-50%);
+                transition: 0.5s;
                 background: #fff;
+                visibility: hidden;
             }
             &::before {
                 transform: translate(-50%,-50%) rotate(45deg);
@@ -119,21 +119,21 @@ body {
         /*checked > label active */
         input[id=chat]:checked ~ label[for=chat]::before {
             transform: translate(-50%,-50%) rotate(-45deg);
-            opacity: 1;
+            visibility: visible;
         }
         input[id=chat]:checked ~ label[for=chat]::after {
             transform: translate(-50%,-50%) rotate(-135deg);
-            opacity: 1;
+            visibility: visible;
         }
         input[id=chat]:checked ~ label[for=chat]{
             background: none;
         }
         input[id=chat]:checked ~ .link {
-            opacity: 1;
+            visibility: visible;
             transform: translateY(-5%);
         }
         .link {
-            opacity: 0;
+            visibility: hidden;
             position: absolute;
             top: -210%;
             left: -200%;
@@ -739,7 +739,9 @@ main {
                     }
                     .prod-util {
                         display: flex;
-                        position: relative;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
                         margin-top: 30px;
                         justify-content: center;
                         z-index: 100;
