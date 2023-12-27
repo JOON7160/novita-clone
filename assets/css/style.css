@@ -719,26 +719,32 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=like]::after, .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=like2]::after {
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=like1]::after, .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=like2]::after, .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=like3]::after, .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=like4]::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -650px -200px;
   width: 24px;
   height: 21px;
 }
-.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=cart]::after, .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=cart2]::after {
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=cart1]::after, .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=cart2]::after, .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=cart3]::after, .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util label[for=cart4]::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -735px -198px;
   width: 22px;
   height: 23px;
 }
-.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like]:checked ~ label[for=like]::after,
-.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like2]:checked ~ label[for=like2]::after {
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like1]:checked ~ label[for=like1]::after,
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like2]:checked ~ label[for=like2]::after,
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like3]:checked ~ label[for=like3]::after,
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like4]:checked ~ label[for=like4]::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -28px -636px;
   width: 24px;
   height: 21px;
 }
-.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like]:focus ~ label[for=like],
-.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=cart]:focus ~ label[for=cart],
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like1]:focus ~ label[for=like1],
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=cart1]:focus ~ label[for=cart1],
 .best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like2]:focus ~ label[for=like2],
-.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=cart2]:focus ~ label[for=cart2] {
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=cart2]:focus ~ label[for=cart2],
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=cart3]:focus ~ label[for=cart3],
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like3]:focus ~ label[for=like3],
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=like4]:focus ~ label[for=like4],
+.best-seller .best-prod-slide .swiper-wrapper .swiper-slide .desc .prod-util input[id=cart4]:focus ~ label[for=cart4] {
   outline: 2px solid #772480;
 }
 
@@ -843,26 +849,26 @@ main .main-slide .swiper-control .swiper-arrow .swiper-button-prev::after {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util label[for=like]::after, .event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util label[for=like2]::after {
+.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util label[for=like5]::after, .event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util label[for=like6]::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -650px -200px;
   width: 24px;
   height: 21px;
 }
-.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util label[for=cart]::after, .event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util label[for=cart2]::after {
+.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util label[for=cart5]::after, .event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util label[for=cart6]::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -735px -198px;
   width: 22px;
   height: 23px;
 }
-.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=like]:checked ~ label[for=like]::after,
-.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=like2]:checked ~ label[for=like2]::after {
+.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=like5]:checked ~ label[for=like5]::after,
+.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=like6]:checked ~ label[for=like6]::after {
   background: url(../imgs/ico-sprites.svg) no-repeat -28px -636px;
   width: 24px;
   height: 21px;
 }
-.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=like]:focus ~ label[for=like],
-.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=cart]:focus ~ label[for=cart],
-.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=like2]:focus ~ label[for=like2],
-.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=cart2]:focus ~ label[for=cart2] {
+.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=like5]:focus ~ label[for=like5],
+.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=cart5]:focus ~ label[for=cart5],
+.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=like6]:focus ~ label[for=like6],
+.event-product .swiper.event-prod-slide .swiper-wrapper .swiper-slide .prod-util input[id=cart6]:focus ~ label[for=cart6] {
   outline: 2px solid #772480;
 }
 

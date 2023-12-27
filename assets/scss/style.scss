@@ -758,29 +758,39 @@ main {
                                 left: 50%;
                                 transform: translate(-50%,-50%);
                             }
-                            &[for=like]::after,
-                            &[for=like2]::after {
+                            &[for=like1]::after,
+                            &[for=like2]::after,
+                            &[for=like3]::after,
+                            &[for=like4]::after {
                                 background: url(../imgs/ico-sprites.svg)no-repeat -650px -200px;
                                 width: 24px;
                                 height: 21px;
                             }
-                            &[for=cart]::after,
-                            &[for=cart2]::after {
+                            &[for=cart1]::after,
+                            &[for=cart2]::after,
+                            &[for=cart3]::after,
+                            &[for=cart4]::after {
                                 background: url(../imgs/ico-sprites.svg)no-repeat -735px -198px;
                                 width: 22px;
                                 height: 23px;
                             }
                         }
-                        input[id=like]:checked ~ label[for=like]::after,
-                        input[id=like2]:checked ~ label[for=like2]::after {
+                        input[id=like1]:checked ~ label[for=like1]::after,
+                        input[id=like2]:checked ~ label[for=like2]::after,
+                        input[id=like3]:checked ~ label[for=like3]::after,
+                        input[id=like4]:checked ~ label[for=like4]::after {
                             background: url(../imgs/ico-sprites.svg)no-repeat -28px -636px;
                             width: 24px;
                             height: 21px;;
                         }
-                        input[id=like]:focus ~ label[for=like],
-                        input[id=cart]:focus ~ label[for=cart],
+                        input[id=like1]:focus ~ label[for=like1],
+                        input[id=cart1]:focus ~ label[for=cart1],
                         input[id=like2]:focus ~ label[for=like2],
-                        input[id=cart2]:focus ~ label[for=cart2] { 
+                        input[id=cart2]:focus ~ label[for=cart2],
+                        input[id=cart3]:focus ~ label[for=cart3],
+                        input[id=like3]:focus ~ label[for=like3],
+                        input[id=like4]:focus ~ label[for=like4],
+                        input[id=cart4]:focus ~ label[for=cart4] { 
                             outline: 2px solid $primary-color;
                         }
                     }
@@ -793,9 +803,7 @@ main {
 /* event-product section */
 .event-product {
     padding-top: 120px;
-    .inner {
-        
-    }
+    .inner {}
     h2 {
         text-align: center;
         font-size: 35px;
@@ -892,29 +900,29 @@ main {
                                 left: 50%;
                                 transform: translate(-50%,-50%);
                             }
-                            &[for=like]::after,
-                            &[for=like2]::after {
+                            &[for=like5]::after,
+                            &[for=like6]::after {
                                 background: url(../imgs/ico-sprites.svg)no-repeat -650px -200px;
                                 width: 24px;
                                 height: 21px;;
                             }
-                            &[for=cart]::after,
-                            &[for=cart2]::after {
+                            &[for=cart5]::after,
+                            &[for=cart6]::after {
                                 background: url(../imgs/ico-sprites.svg)no-repeat -735px -198px;
                                 width: 22px;
                                 height: 23px;
                             }
                         }
-                        input[id=like]:checked ~ label[for=like]::after,
-                        input[id=like2]:checked ~ label[for=like2]::after {
+                        input[id=like5]:checked ~ label[for=like5]::after,
+                        input[id=like6]:checked ~ label[for=like6]::after {
                             background: url(../imgs/ico-sprites.svg)no-repeat -28px -636px;
                             width: 24px;
-                            height: 21px;;
+                            height: 21px;
                         }
-                        input[id=like]:focus ~ label[for=like],
-                        input[id=cart]:focus ~ label[for=cart],
-                        input[id=like2]:focus ~ label[for=like2],
-                        input[id=cart2]:focus ~ label[for=cart2] { 
+                        input[id=like5]:focus ~ label[for=like5],
+                        input[id=cart5]:focus ~ label[for=cart5],
+                        input[id=like6]:focus ~ label[for=like6],
+                        input[id=cart6]:focus ~ label[for=cart6] { 
                             outline: 2px solid $primary-color;
                         }
                     }
