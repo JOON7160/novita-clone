@@ -392,20 +392,20 @@ main {
             display: flex;
             width: 400%;
             .swiper-slide {
+                position: relative;
                 width: 100%;
                 height: 100%;
-                position: relative;
                 &-active {
                     .desc {
                         animation: popup 0.7s linear;
                     }
                 }
                 video {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    z-index: -1;
-                    width: 100vw;
+                    // position: absolute;
+                    // top: 0;
+                    // left: 0;
+                    // z-index: -1;
+                    // width: 100%;
                     height: 100vh;
                 }
                 .desc {
@@ -739,12 +739,8 @@ main {
                     }
                     .prod-util {
                         display: flex;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
                         margin-top: 30px;
                         justify-content: center;
-                        z-index: 100;
                         input {
                             opacity: 0;
                         }
