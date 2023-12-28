@@ -688,7 +688,10 @@ $primary-color : #772480;
             }
             p {
                 margin-top: 20px;
+                padding: 0 10px;
+                word-break: keep-all;
             }
+            
         }
         &-cont {
             flex-direction: column;
@@ -723,7 +726,7 @@ $primary-color : #772480;
             width: 100%;
             .inno-link {
                 span {
-                    word-break: keep-all;
+                    text-wrap: nowrap;
                 }
             }
             .innovation_pc {
@@ -741,6 +744,8 @@ $primary-color : #772480;
                 }
                 p {
                     text-wrap: nowrap;
+                    font-size: 17px;
+                    line-height: 2em;
                 }
             }
         }

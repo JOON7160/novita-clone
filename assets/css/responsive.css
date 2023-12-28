@@ -602,6 +602,8 @@
   }
   .service .title p {
     margin-top: 20px;
+    padding: 0 10px;
+    word-break: keep-all;
   }
   .service-cont {
     flex-direction: column;
@@ -636,7 +638,7 @@
     width: 100%;
   }
   .info-innovation .inno-link span {
-    word-break: keep-all;
+    text-wrap: nowrap;
   }
   .info-innovation .innovation_pc {
     display: none;
@@ -652,6 +654,8 @@
   }
   .info-innovation .cont p {
     text-wrap: nowrap;
+    font-size: 17px;
+    line-height: 2em;
   }
   .info-link {
     margin-top: 50px;
