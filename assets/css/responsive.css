@@ -317,6 +317,12 @@
     width: 20px;
     margin: 0 10px;
   }
+  /* find  */
+  .find .title h2 {
+    word-wrap: nowrap;
+    font-size: 25px;
+    border: 1px solid #000;
+  }
   /* best-seller section */
   .best-seller .best-prod-slide .swiper-control {
     position: absolute;
