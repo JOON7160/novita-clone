@@ -740,8 +740,8 @@ $primary-color : #772480;
         &-innovation {
             width: 100%;
             .inno-link {
+                text-wrap: nowrap;
                 span {
-                    text-wrap: nowrap;
                 }
             }
             .innovation_pc {
