@@ -30,7 +30,12 @@ $primary-color : #772480;
             background: #fff;
             .mo-util {
                 margin-right: 10px;
-                .cart,.trigger {
+                .cart {
+                    filter: invert(0);
+                    transform: scale(1.2);
+                    margin-right: 5px;
+                }
+                .trigger {
                     filter: invert(100%);
                     transform: scale(1.2);
                 }
@@ -69,7 +74,7 @@ $primary-color : #772480;
                 left: 0;
                 width: 100%;
                 height: 100vh;
-                background: #10101033;
+                background: #10101057;
                 z-index: -1;
             }
             &-cont {
@@ -83,7 +88,7 @@ $primary-color : #772480;
                 background: #fff;
                 transition: 0.5s;
                 .cont-util {
-                    padding: 10px 15px;
+                    padding: 20px 15px;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -279,12 +284,14 @@ $primary-color : #772480;
         }
         .mo-util {
             display: flex;
+            align-items: center;
             gap: 10px;
             .cart {
                 display: inline-block;
-                background: url(../imgs/img-sprites.png)no-repeat -520px 0;
-                width: 18px;
-                height: 19px;
+                background: url(../imgs/ico-sprites-line.svg)no-repeat -157px -587px;
+                width: 24px;
+                height: 24px;
+                filter: invert(100%);
             }
             .trigger {
                 position: relative;
@@ -336,7 +343,7 @@ $primary-color : #772480;
                     .swiper-button-control {
                         button {
                             .fa-solid {
-                                font-size: 25px;
+                                font-size: 16px;
                             }
                         }
                     }
@@ -430,9 +437,7 @@ $primary-color : #772480;
                     }
                 }
             }
-    
         }
-
     }
     /*event-product section */
     .event-product {
