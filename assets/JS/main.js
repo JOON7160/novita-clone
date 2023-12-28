@@ -138,10 +138,10 @@ $(function(){
             if ((e.type === 'click' && e.button === 0) || (e.type === 'keydown' && e.key === ' ')) {
             if (bestSellerSwiper.autoplay.running) {
                 bestSellerSwiper.autoplay.stop();
-                $('.toggle-btn .fa-solid').removeClass('fa-play').addClass('fa-pause')
+                $('.best-toggle-btn .fa-solid').removeClass('fa-play').addClass('fa-pause')
             } else {
                 bestSellerSwiper.autoplay.start();
-                $('.toggle-btn .fa-solid').removeClass('fa-pause').addClass('fa-play')
+                $('.best-toggle-btn .fa-solid').removeClass('fa-pause').addClass('fa-play')
             }
         }
     

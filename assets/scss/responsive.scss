@@ -356,16 +356,17 @@ $primary-color : #772480;
     .best-seller {
         .best-prod-slide {
             .swiper-control {
-                bottom: 10%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 200px;
+                height: 50px;
                 .swiper-arrow {
-    
                 }
             }
             .swiper-wrapper {
                 width: 400%;
-                padding-bottom: 70px;
                 .swiper-slide {
-                    width: 100%;
                     &-active {
                         .img {
                             img {
@@ -393,13 +394,12 @@ $primary-color : #772480;
                             flex-direction: column;
                             align-items: center;
                             justify-content: center;
-                            border: 1px solid #fff;
                         }
                         .prod-info {
                             width: 100%;
                             text-align: center;
                             strong {
-                                font-size: 40px;
+                                font-size: 30px;
                             }
                             hr {
                                 display: none;
@@ -413,9 +413,19 @@ $primary-color : #772480;
                             }
                         }
                         .prod-util {
+                            align-items: center;
                             position: absolute;
-                            right: 5%;
-                            bottom: 5%;
+                            width: 100%;
+                            right: 0;
+                            bottom: 3%;
+                            padding: 0 5px;
+                            .detail-link {
+                                display: inline-block;
+                                width: 120px;
+                                height: 40px;
+                                padding: 5px 10px;
+                                margin-right: auto;
+                            }
                         }
                     }
                 }
@@ -469,26 +479,6 @@ $primary-color : #772480;
                 width: 200%;
                 .swiper-slide {
                     margin-left: 10px;
-                    .prod-util {
-                        bottom: 13%;
-                    }
-                    .prod-price {
-                        display: none;
-                    }
-                    .prod-price-mo {
-                        margin-top: 30px;
-                        display: block;
-                        b {
-                            font-size: 30px;
-                            display: block;
-                        }
-                        .price {
-                            font-size: 30px;
-                            font-weight: 500;
-                            color: $primary-color;
-                        }
-                        
-                    }
                     .prod {
                         &-img {
                             width: 100%;
@@ -497,9 +487,28 @@ $primary-color : #772480;
                                 object-fit: cover;
                             }
                         }
+                        &-price {
+                            display: none;
+                            &-mo {
+                                display: block;
+                                margin-top: 30px;
+                                b {
+                                    font-size: 25px;
+                                    display: block;
+                                }
+                                .price {
+                                    font-size: 25px;
+                                    font-weight: 500;
+                                    color: $primary-color;
+                                }
+                            }
+                        }
                         &-desc {
                             top: 12%;
                             color: #000;
+                        }
+                        &-util {
+                            bottom: 25%;
                         }
                     }
                 }
