@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@200;400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;600&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
 /* reset css */
 ul, li {
   margin: 0;
@@ -115,7 +116,7 @@ body {
   height: 2px;
   z-index: 100;
   transform: translate(-50%, -50%);
-  transition: 0.5s;
+  transition: 0.2s;
   background: #fff;
   visibility: hidden;
 }

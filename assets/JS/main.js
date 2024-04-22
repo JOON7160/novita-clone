@@ -200,7 +200,6 @@ $(function(){
         },
     });
     eventProdSwiper.controller.control = pagingSwiper;
-
     //eventNotiswiper
     var eventNotiSwiper = new Swiper(".event-slide", {
         slidesPerView: 1,
@@ -228,7 +227,6 @@ $(function(){
             slidesPerView: 1,
             spaceBetween: 0,
             },
-
             1024: {
             slidesPerView: 1,
             spaceBetween: 0,
